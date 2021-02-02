@@ -3,7 +3,8 @@ const scenes = [
   {
     x: 0,
     y: 0,
-    scale: 1
+    scale: 1,
+    arrowLeft: false
   },
   {
     x: -600,
@@ -13,7 +14,8 @@ const scenes = [
   {
     x: -1600,
     y: -1200,
-    scale: 1.5
+    scale: 1.5,
+    arrowRight: false
   }
 ]
 
@@ -48,13 +50,13 @@ rightArrow.click(() => {
 })
 
 const showArrow = () => {
-  if(sceneIndex == 0) {
+  if(scenes[sceneIndex].arrowLeft == false) {
     leftArrow.fadeOut()
   } else {
     leftArrow.fadeIn()
   }
   
-  if(sceneIndex == 2) {
+  if(scenes[sceneIndex].arrowRight == false) {
     rightArrow.fadeOut()
   } else {
     rightArrow.fadeIn()
@@ -63,8 +65,9 @@ const showArrow = () => {
 
 // Fonction d'initialisation
 const init = () => {
+  $('.menu').fadeOut()
+  $('.container').fadeIn()
+
   sceneIndex = 0
   moveToScene(sceneIndex)
 }
-
-init()
