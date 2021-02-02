@@ -1,20 +1,50 @@
 // Variable pour changer de scènes
 const scenes = [
   {
-    x: 0,
-    y: 0,
-    scale: 1,
+    x: 450,
+    y: -200,
+    scale: 1.5,
     arrowLeft: false
   },
   {
-    x: -600,
-    y: 200,
-    scale: 2
+    x: -1000,
+    y: -250,
+    scale: 1.8
   },
   {
-    x: -1600,
+    x: -1900,
+    y: -600,
+    scale: 1.4
+  },
+  {
+    x: -3700,
+    y: -450,
+    scale: 1.6
+  },
+  {
+    x: 350,
+    y: -1500,
+    scale: 1.4
+  },
+  {
+    x: -950,
+    y: -1300,
+    scale: 1.6
+  },
+  {
+    x: -1100,
+    y: -1500,
+    scale: 1.2
+  },
+  {
+    x: -2500,
     y: -1200,
-    scale: 1.5,
+    scale: 1.2
+  },
+  {
+    x: -500,
+    y: -300,
+    scale: 0.5,
     arrowRight: false
   }
 ]
@@ -24,7 +54,7 @@ let sceneIndex
 
 const moveToScene = (sceneIndex) => {
   gsap.timeline().to('.container', {
-    duration: 3,
+    duration: 2,
     x: scenes[sceneIndex].x,
     y: scenes[sceneIndex].y,
     scale: scenes[sceneIndex].scale
@@ -44,7 +74,7 @@ leftArrow.click(() => {
 })
 
 rightArrow.click(() => {
-  if(sceneIndex != 2) sceneIndex++
+  if(sceneIndex != 8) sceneIndex++
   
   moveToScene(sceneIndex)
 })
@@ -55,7 +85,7 @@ const showArrow = () => {
   } else {
     leftArrow.fadeIn()
   }
-  
+
   if(scenes[sceneIndex].arrowRight == false) {
     rightArrow.fadeOut()
   } else {
