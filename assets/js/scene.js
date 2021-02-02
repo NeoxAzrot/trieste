@@ -1,7 +1,7 @@
 // Variable pour changer de scènes
 const scenes = [
   {
-    x: 450,
+    x: 350,
     y: -200,
     scale: 1.5,
     arrowLeft: false
@@ -22,7 +22,7 @@ const scenes = [
     scale: 1.6
   },
   {
-    x: 350,
+    x: 300,
     y: -1500,
     scale: 1.4
   },
