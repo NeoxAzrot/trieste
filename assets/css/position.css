@@ -6,7 +6,7 @@
 }
 
 .interaction.after_dame {
-  display: none;
+  display: block;
 }
 
 #homme_parapluie {

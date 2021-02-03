@@ -1,0 +1,15 @@
+$('#fish_answer').on('input', () => {
+  let answer = $('#fish_answer').val().toLowerCase().replace('é', 'e')
+  
+  if(answer == 'emeraude') {
+    $('#fish_answer').prop('disabled', true)
+    $('.right_answer').fadeIn()
+
+    setTimeout(() => {
+      $('.fish_question_container').removeClass('show')
+  
+      nb_coins++
+      showObjects()
+    }, 2000)
+  }
+});

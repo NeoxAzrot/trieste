@@ -126,3 +126,5 @@ const init = () => {
   chapitreIndex = 0
   moveToScene(chapitreIndex, sceneIndex)
 }
+
+init()

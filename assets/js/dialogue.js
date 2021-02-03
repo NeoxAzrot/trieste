@@ -92,10 +92,6 @@ let data_id = ''
 $('[data-dialog-id]').click(function () {
   data_id = $(this).attr('data-dialog-id')
   showDialog(dialogs[data_id])
-
-  if(data_id == 'dame_blanche') {
-    nextStep(data_id)
-  }
 });
 
 // Fonction pour afficher et cacher les dialogues
@@ -132,6 +128,9 @@ const nextDialog = () => {
   if(dialogs[data_id].text[index_dialog] == undefined) {
     index_dialog = 0
     hideDialog()
+
+    // On effectu d'autres actions
+    nextStep(data_id)
   } else {
     showDialog(dialogs[data_id])
   }

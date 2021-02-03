@@ -1,5 +1,5 @@
 // Les dialogues
-const app = document.getElementById('app');
+const app = document.getElementById('app')
 
 const typeAnimation = (text) => {
   const typewriter = new Typewriter(app, {

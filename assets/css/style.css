@@ -98,7 +98,7 @@ body {
 .dialog .images img {
   position: absolute;
   bottom: 10%;
-  filter : brightness(0.7);
+  filter : brightness(0.4);
   transition: 0.4s ease;
   z-index: 2;
   max-width: 400px;
@@ -129,7 +129,7 @@ body {
 }
 
 .dialog img.talking {
-  filter : brightness(1.5);
+  filter : brightness(1.1);
 }
 
 .dialog::before, .dialog::after {
