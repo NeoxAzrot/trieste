@@ -4,11 +4,13 @@
     <title>Trieste | Une expérience intéractive</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" type="image/png" href="assets/images/dialogs/crabe.png" />
 
     <!-- External link -->
     <link rel="stylesheet" href="assets/css/font.css">
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css">
+    <link rel="stylesheet" href="assets/css/position.css">
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"> -->
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
     <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
@@ -28,25 +30,27 @@
     <section class="container" style="display: none;">
       <div class="container_relative">
         <img src="assets/images/fresque.png" class="fresque">
+        <div id="homme_parapluie" data-dialog-id="parapluie" class="interaction"></div>
       </div>
     </section>
 
     <!-- Les flèches -->
-    <i class="fas fa-arrow-left arrow" id="previous" style="display: none;"></i>
-    <i class="fas fa-arrow-right arrow" id="next" style="display: none;"></i>
+    <img class="arrow left" id="previous" src="assets/images/fleche.png" alt="Flèche de direction gauche">
+    <img class="arrow" id="next" src="assets/images/fleche.png" alt="Flèche de direction droite">
 
     <!-- La bulle de dialogue -->
     <div class="dialog_container" style="display: none;">
       <div class="dialog">
         <div class="images">
-          <img class="talking" src="assets/images/crabe.png">
-          <img src="assets/images/crabe.png">
+          <img id="user" src="assets/images/dialogs/crabe.png">
+          <img id="character" src="assets/images/dialogs/crabe.png">
         </div>
-        <p class="text" id="app">Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n'a pas fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique, sans que son contenu n'en soit modifié. Il a été popularisé dans les années 1960 grâce à la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus récemment, par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker.</p>
+        <p class="text" id="app"></p>
       </div>
     </div>
 
     <script src="assets/js/scene.js"></script>
-    <script src="assets/js/text.js"></script>
+    <script src="assets/js/dialogue.js"></script>
+    <script src="assets/js/text_animation.js"></script>
   </body>
 </html>

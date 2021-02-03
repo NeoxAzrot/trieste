@@ -1,63 +1,86 @@
 // Variable pour changer de scènes
-const scenes = [
+const fresque = $('.fresque')
+
+const chapitres = [
   {
-    x: 350,
-    y: -200,
-    scale: 1.5,
-    arrowLeft: false
+    scenes: [
+      {
+        x: -519,
+        y: -597,
+        scale: 1.2,
+        arrowLeft: false
+      },
+      {
+        x: -1510,
+        y: -620,
+        scale: 1.6
+      },
+      {
+        x: -2431,
+        y: -813,
+        scale: 1.3,
+        arrowRight: false
+      }
+    ]
   },
   {
-    x: -1000,
-    y: -250,
-    scale: 1.8
-  },
-  {
-    x: -1900,
-    y: -600,
-    scale: 1.4
-  },
-  {
-    x: -3700,
-    y: -450,
-    scale: 1.6
-  },
-  {
-    x: 300,
-    y: -1500,
-    scale: 1.4
-  },
-  {
-    x: -950,
-    y: -1300,
-    scale: 1.6
-  },
-  {
-    x: -1100,
-    y: -1500,
-    scale: 1.2
-  },
-  {
-    x: -2500,
-    y: -1200,
-    scale: 1.2
-  },
-  {
-    x: -500,
-    y: -300,
-    scale: 0.5,
-    arrowRight: false
+    scenes: [
+      {
+        x: -3285,
+        y: -767,
+        scale: 1.6
+      },
+      {
+        x: -400,
+        y: -1577,
+        scale: 1.4
+      },
+      {
+        x: -900,
+        y: -926,
+        scale: 1.6
+      },
+      {
+        x: -1979,
+        y: -1715,
+        scale: 1.2
+      },
+      {
+        x: -3079,
+        y: -1627,
+        scale: 1.2
+      },
+      {
+        x: -1920,
+        y: -1080,
+        scale: 0.5,
+        arrowRight: false
+      }
+    ]
   }
 ]
 
 // Fonction pour changer de scène
+let chapitreIndex
 let sceneIndex
 
-const moveToScene = (sceneIndex) => {
+const moveToScene = (chapitreIndex, sceneIndex) => {
+  //let scale = chapitres[chapitreIndex].scenes[sceneIndex].scale
+
+  let x = chapitres[chapitreIndex].scenes[sceneIndex].x// * scale
+  let y = chapitres[chapitreIndex].scenes[sceneIndex].y// * scale
+
+  x += window.innerWidth / 2
+  y += window.innerHeight / 2
+
+  x = x / fresque[0].width * 100 + "%"
+  y = y / fresque[0].height * 100 + "%"
+
   gsap.timeline().to('.container', {
     duration: 2,
-    x: scenes[sceneIndex].x,
-    y: scenes[sceneIndex].y,
-    scale: scenes[sceneIndex].scale
+    x: x,
+    y: y,
+    scale: chapitres[chapitreIndex].scenes[sceneIndex].scale
   })
 
   showArrow()
@@ -70,23 +93,23 @@ const rightArrow = $('#next')
 leftArrow.click(() => {
   if(sceneIndex != 0) sceneIndex--
   
-  moveToScene(sceneIndex)
+  moveToScene(chapitreIndex, sceneIndex)
 })
 
 rightArrow.click(() => {
   if(sceneIndex != 8) sceneIndex++
   
-  moveToScene(sceneIndex)
+  moveToScene(chapitreIndex, sceneIndex)
 })
 
 const showArrow = () => {
-  if(scenes[sceneIndex].arrowLeft == false) {
+  if(chapitres[chapitreIndex].scenes[sceneIndex].arrowLeft == false) {
     leftArrow.fadeOut()
   } else {
     leftArrow.fadeIn()
   }
 
-  if(scenes[sceneIndex].arrowRight == false) {
+  if(chapitres[chapitreIndex].scenes[sceneIndex].arrowRight == false) {
     rightArrow.fadeOut()
   } else {
     rightArrow.fadeIn()
@@ -99,5 +122,6 @@ const init = () => {
   $('.container').fadeIn()
 
   sceneIndex = 0
-  moveToScene(sceneIndex)
+  chapitreIndex = 0
+  moveToScene(chapitreIndex, sceneIndex)
 }
