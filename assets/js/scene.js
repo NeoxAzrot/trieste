@@ -5,20 +5,20 @@ const chapitres = [
   {
     scenes: [
       {
-        x: -519,
+        x: -470,
         y: -597,
-        scale: 1.2,
+        scale: 1.4,
         arrowLeft: false
       },
       {
-        x: -1510,
-        y: -620,
-        scale: 1.6
+        x: -1700,
+        y: -720,
+        scale: 2.1
       },
       {
-        x: -2431,
-        y: -813,
-        scale: 1.3,
+        x: -2620,
+        y: -800,
+        scale: 1.5,
         arrowRight: false
       }
     ]
@@ -26,34 +26,35 @@ const chapitres = [
   {
     scenes: [
       {
-        x: -3285,
-        y: -767,
-        scale: 1.6
+        x: -3680,
+        y: -760,
+        scale: 1.6,
+        arrowLeft: false
       },
       {
-        x: -400,
-        y: -1577,
+        x: -500,
+        y: -1550,
         scale: 1.4
       },
       {
-        x: -900,
-        y: -926,
-        scale: 1.6
+        x: -1400,
+        y: -1500,
+        scale: 1.9
       },
       {
-        x: -1979,
-        y: -1715,
+        x: -1650,
+        y: -1600,
+        scale: 1.3
+      },
+      {
+        x: -2700,
+        y: -1550,
         scale: 1.2
       },
       {
-        x: -3079,
-        y: -1627,
-        scale: 1.2
-      },
-      {
-        x: -1920,
-        y: -1080,
-        scale: 0.5,
+        x: -1150,
+        y: -700,
+        scale: 0.52,
         arrowRight: false
       }
     ]
@@ -70,8 +71,8 @@ const moveToScene = (chapitreIndex, sceneIndex) => {
   let x = chapitres[chapitreIndex].scenes[sceneIndex].x
   let y = chapitres[chapitreIndex].scenes[sceneIndex].y
 
-  x += window.innerWidth / 2 //* scale
-  y += window.innerHeight / 2 //* scale
+  x += window.innerWidth / 2 * scale
+  y += window.innerHeight / 2 * scale
 
   x = x / fresque[0].width * 100 + "%"
   y = y / fresque[0].height * 100 + "%"
@@ -125,5 +126,3 @@ const init = () => {
   chapitreIndex = 0
   moveToScene(chapitreIndex, sceneIndex)
 }
-
-init()

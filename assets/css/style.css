@@ -47,7 +47,7 @@ body {
 
 .fresque {
   z-index: -1;
-  max-width: 384vw;
+  width: 200vw; /* A change si trop pixelissé */
 }
 
 /* Les flèches */
