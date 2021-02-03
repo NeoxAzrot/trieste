@@ -37,6 +37,10 @@ body {
   left: 0;
 }
 
+.container.blur {
+  filter: blur(4px);
+}
+
 .container_relative {
   position: relative;
 }
@@ -97,6 +101,7 @@ body {
   filter : brightness(0.7);
   transition: 0.4s ease;
   z-index: 2;
+  max-width: 400px;
 }
 
 .dialog .images img:nth-child(1) {
@@ -242,4 +247,25 @@ body {
   100% {
     opacity: 1;
   }
+}
+
+.object_container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  z-index: 9999;
+  margin-top: 30px;
+  margin-left: 30px;
+}
+
+.object_container img {
+  margin-left: 10px;
+  display: none;
+}
+
+.object_container img:first-child {
+  margin-left: 0;
 }

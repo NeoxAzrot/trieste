@@ -65,13 +65,13 @@ let chapitreIndex
 let sceneIndex
 
 const moveToScene = (chapitreIndex, sceneIndex) => {
-  //let scale = chapitres[chapitreIndex].scenes[sceneIndex].scale
+  let scale = chapitres[chapitreIndex].scenes[sceneIndex].scale
 
-  let x = chapitres[chapitreIndex].scenes[sceneIndex].x// * scale
-  let y = chapitres[chapitreIndex].scenes[sceneIndex].y// * scale
+  let x = chapitres[chapitreIndex].scenes[sceneIndex].x
+  let y = chapitres[chapitreIndex].scenes[sceneIndex].y
 
-  x += window.innerWidth / 2
-  y += window.innerHeight / 2
+  x += window.innerWidth / 2 //* scale
+  y += window.innerHeight / 2 //* scale
 
   x = x / fresque[0].width * 100 + "%"
   y = y / fresque[0].height * 100 + "%"
@@ -80,7 +80,7 @@ const moveToScene = (chapitreIndex, sceneIndex) => {
     duration: 2,
     x: x,
     y: y,
-    scale: chapitres[chapitreIndex].scenes[sceneIndex].scale
+    scale: scale
   })
 
   showArrow()
@@ -125,3 +125,5 @@ const init = () => {
   chapitreIndex = 0
   moveToScene(chapitreIndex, sceneIndex)
 }
+
+init()

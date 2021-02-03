@@ -4,9 +4,49 @@
   z-index: 1;
   cursor: pointer;
 }
+
+.interaction.after_dame {
+  display: none;
+}
+
 #homme_parapluie {
   top: 32%;
   left: 20.5%;
   width: 90px;
   height: 170px;
+}
+
+#homme_qui_mange {
+  top: 32%;
+  left: 23.25%;
+  width: 80px;
+  height: 200px;
+}
+
+#tram {
+  top: 27%;
+  left: 12.5%;
+  width: 140px;
+  height: 260px;
+}
+
+#homme_poisson {
+  top: 40%;
+  left: 43%;
+  width: 70px;
+  height: 65px;
+}
+
+#dame_blanche {
+  top: 27%;
+  left: 60.5%;
+  width: 190px;
+  height: 443px;
+}
+
+#coffre_soldat {
+  top: 36.5%;
+  left: 69%;
+  width: 80px;
+  height: 80px;
 }
