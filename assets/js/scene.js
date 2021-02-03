@@ -7,7 +7,7 @@ const chapitres = [
       {
         x: -519,
         y: -597,
-        scale: 1.2,
+        scale: 1.5,
         arrowLeft: false
       },
       {
@@ -70,8 +70,8 @@ const moveToScene = (chapitreIndex, sceneIndex) => {
   let x = chapitres[chapitreIndex].scenes[sceneIndex].x
   let y = chapitres[chapitreIndex].scenes[sceneIndex].y
 
-  x += window.innerWidth / 2 //* scale
-  y += window.innerHeight / 2 //* scale
+  x += window.innerWidth / 2 * scale
+  y += window.innerHeight / 2 * scale
 
   x = x / fresque[0].width * 100 + "%"
   y = y / fresque[0].height * 100 + "%"

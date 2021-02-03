@@ -47,7 +47,8 @@ body {
 
 .fresque {
   z-index: -1;
-  max-width: 384vw;
+  width: 200vw;
+  /* width: 3840px; */
 }
 
 /* Les flèches */
