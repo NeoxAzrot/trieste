@@ -1,11 +1,15 @@
 // Variable pour changer de scènes
 const fresque = $('.fresque')
+const originalSize = {
+  w: 3840,
+  h: 2160
+}
 
 const chapitres = [
   {
     scenes: [
       {
-        x: -470,
+        x: -540,
         y: -597,
         scale: 1.4,
         arrowLeft: false
@@ -68,22 +72,24 @@ let sceneIndex
 const moveToScene = (chapitreIndex, sceneIndex) => {
   let scale = chapitres[chapitreIndex].scenes[sceneIndex].scale
 
-  let x = chapitres[chapitreIndex].scenes[sceneIndex].x
+  let x = chapitres[chapitreIndex].scenes[sceneIndex].x 
   let y = chapitres[chapitreIndex].scenes[sceneIndex].y
 
-  x += window.innerWidth / 2 * scale
-  y += window.innerHeight / 2 * scale
+  x /= originalSize.w
+  y /= originalSize.h
 
-  x = x / fresque[0].width * 100 + "%"
-  y = y / fresque[0].height * 100 + "%"
+  x = x * fresque[0].offsetWidth + window.innerWidth / 2
+  y = y * fresque[0].offsetHeight + window.innerHeight / 2
 
-  gsap.timeline().to('.container', {
+  gsap.to('.container_transform', {
     duration: 2,
     x: x,
     y: y,
-    scale: scale
   })
-
+  gsap.to('.container', {
+    duration: 2,
+    scale
+  })
   showArrow()
 }
 
