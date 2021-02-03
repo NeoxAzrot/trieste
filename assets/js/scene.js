@@ -1,9 +1,10 @@
 // Variable pour changer de scènes
 const scenes = [
   {
-    x: 450,
+    x: 350,
     y: -200,
-    scale: 1.5
+    scale: 1.5,
+    arrowLeft: false
   },
   {
     x: -1000,
@@ -21,7 +22,7 @@ const scenes = [
     scale: 1.6
   },
   {
-    x: 350,
+    x: 300,
     y: -1500,
     scale: 1.4
   },
@@ -43,8 +44,9 @@ const scenes = [
   {
     x: -500,
     y: -300,
-    scale: 0.5
-  },
+    scale: 0.5,
+    arrowRight: false
+  }
 ]
 
 // Fonction pour changer de scène
@@ -78,13 +80,13 @@ rightArrow.click(() => {
 })
 
 const showArrow = () => {
-  if(sceneIndex == 0) {
+  if(scenes[sceneIndex].arrowLeft == false) {
     leftArrow.fadeOut()
   } else {
     leftArrow.fadeIn()
   }
-  
-  if(sceneIndex == 8) {
+
+  if(scenes[sceneIndex].arrowRight == false) {
     rightArrow.fadeOut()
   } else {
     rightArrow.fadeIn()
@@ -93,8 +95,9 @@ const showArrow = () => {
 
 // Fonction d'initialisation
 const init = () => {
+  $('.menu').fadeOut()
+  $('.container').fadeIn()
+
   sceneIndex = 0
   moveToScene(sceneIndex)
 }
-
-init()

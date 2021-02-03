@@ -1,0 +1,9 @@
+@font-face {
+  font-family: "Black Rose";
+  src: url('../fonts/blackrose.ttf') format("truetype");
+} 
+
+ @font-face {
+  font-family: "Type Writter";
+  src: url('../fonts/typewritter.ttf') format("truetype");
+}
