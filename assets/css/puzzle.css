@@ -1,0 +1,30 @@
+/* must match size of imge */
+#container {
+    width: 598px;
+    height: 568px;
+  }
+  .puzzle {
+     background-image:url(https://cdn.discordapp.com/attachments/797144621385646081/806446976757268520/Plan_de_travail_1.png);
+     width:185px;
+     height:185px;
+     float: left;
+     transition: 0.25s;
+  }
+  .piece1 { background-position: 0 0; }
+  .piece2 { background-position: -185px 0; }
+  .piece3 { background-position: -370px 0; }
+  .piece4 { background-position: 0 -185px; }
+  .piece5 { background-position: -185px -185px; }
+  .piece6 { background-position: -370px -185px; }
+  .piece7 { background-position: 0 -370px; }
+  .piece8 { background-position: -185px -370px; }
+  .piece9 { background-position: -370px -370px; }
+  
+  /* .piece1 { transform: rotate(90deg); }
+  .piece2 { transform: rotate(-90deg); }
+  .piece3 { transform: rotate(180deg); }
+  .piece4 { transform: rotate(90deg); }
+  .piece5 { transform: rotate(0deg); }
+  .piece6 { transform: rotate(-180deg); }
+  .piece7 { transform: rotate(-90deg); }
+  .piece8 { transform: rotate(-180deg); } */
