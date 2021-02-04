@@ -1,0 +1,24 @@
+.video_container {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 1s ease forwards;
+  background: #000;
+  transition: opacity 0.8s ease;
+  opacity: 0;
+}
+
+.video_container.show {
+  opacity: 1;
+}
+
+#video {
+  max-width: 100vw;
+  max-height: 100vh;
+}

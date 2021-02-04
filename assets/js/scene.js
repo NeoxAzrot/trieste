@@ -166,7 +166,9 @@ const showArrow = () => {
 // Fonction pour jouer la musique d'ambiance sur chaque scène
 const playSound = (sound) => {
   if(sound) {
+    // Reprends le son où il en était
     sound.play()
+    sound.fade(0, 1, 2000)
   }
 }
 
@@ -174,24 +176,20 @@ const playSound = (sound) => {
 const stopSound = () => {
   let = sound = chapitres[chapitreIndex].scenes[sceneIndex].sound
   if(sound) {
-    sound.stop()
+    sound.fade(1, 0, 2000)
+
+    setTimeout(() => {
+      sound.pause()
+    }, 2000);
   }
 }
 
 // Fonction d'initialisation
-const init = () => {
+const initScene = () => {
   $('.menu').fadeOut()
   $('.container').fadeIn()
 
   sceneIndex = 0
   chapitreIndex = 0
   moveToScene(chapitreIndex, sceneIndex)
-  // audio_menu.stop()
 }
-
-let audio_menu = new Howl({
-  src: ['assets/sounds/' + 'intro.mp3'],
-  loop: true,
-  volume: 1
-})
-audio_menu.play()
