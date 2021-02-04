@@ -39,12 +39,15 @@ const nextStep = (id) => {
     $('#user').attr("src", "assets/images/dialogs/" + img)
 
     showDialog(dialogs[data_id])
+    $('#dame_blanche').hide()
   }
 
   // On passe à l'autre chapitre
   if(id == "dame_blanche_soldat") {
     chapitreIndex++
     sceneIndex = 0
+
+    $('.interaction').hide()
 
     moveToScene(chapitreIndex, sceneIndex)
   }
