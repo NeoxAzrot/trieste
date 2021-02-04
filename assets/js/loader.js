@@ -13,6 +13,7 @@ jQuery(document).ready(function($) {
 });
 
 const startMenu = () => {
+  $('.menu').show()
   $('.loader').addClass('hide')
   sound_menu.play()
 }
