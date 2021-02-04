@@ -133,4 +133,4 @@ const init = () => {
   moveToScene(chapitreIndex, sceneIndex)
 }
 
-init()
+//init()
