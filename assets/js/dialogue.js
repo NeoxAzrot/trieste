@@ -157,7 +157,7 @@ const checkDialogWithObject = (id) => {
     $('#homme_qui_mange').hide()
   }
 
-  if(id == 'dame_blanche' && nb_coins >= 1) {
+  if(id == 'dame_blanche' && nb_coins >= 3) {
     data_id = 'dame_blanche_success'
     nb_coins -= 3
     $('#dame_blanche').hide()

@@ -97,8 +97,11 @@ const chapitres = [
         y: -1080,
         scale: 0.5,
         arrowRight: false,
-        sound: '',
-        video: ''
+        sound: new Howl({
+          src: ['assets/sounds/' + 'outro.mp3'],
+          loop: true,
+          volume: 1
+        })
       }
     ]
   }
@@ -204,7 +207,7 @@ const initScene = () => {
   $('.menu').fadeOut()
   $('.container').fadeIn()
 
-  sceneIndex = 0
-  chapitreIndex = 0
+  sceneIndex = 4
+  chapitreIndex = 1
   moveToScene(chapitreIndex, sceneIndex)
 }
