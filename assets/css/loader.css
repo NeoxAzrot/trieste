@@ -1,0 +1,21 @@
+.loader_container {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99999;
+  background: url('../images/menu.jpg') no-repeat fixed center;
+  background-size: cover;
+  transform: translateY(0%);
+  transition: transform 0.6s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  display: none;
+}
+
+.loader_container.hide {
+  transform: translateY(-100%);
+}
