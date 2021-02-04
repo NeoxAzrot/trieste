@@ -4,6 +4,10 @@ const videoPlayerContainer = document.querySelector('.video_container')
 let playIntro = true
 
 const playVideo = (url) => {
+  if(playIntro) {
+    sound_menu.stop()
+  }
+
   videoPlayer.setAttribute('src', 'assets/videos/' + url)
   videoPlayerContainer.style.zIndex = "9999"
   videoPlayerContainer.classList.add('show')
