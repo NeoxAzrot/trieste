@@ -27,11 +27,16 @@ const nextStep = (id) => {
       .start()
   }
 
-    // Pour le tram
-    if(id == "tram") {
-      $('.puzzle_container').addClass('show')
-    }
+  // Pour le tram
+  if(id == "tram") {
+    $('.puzzle_container').addClass('show')
+  }
 }
+
+// Pour le tram
+$('#coffre_soldat').click(() => {
+  $('.code_container').addClass('show')
+})
 
 // Fonction pour afficher les objets
 const showObjects = () => {

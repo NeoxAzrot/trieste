@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="assets/css/position.css">
     <link rel="stylesheet" href="assets/css/fish.css">
     <link rel="stylesheet" href="assets/css/puzzle.css">
+    <link rel="stylesheet" href="assets/css/code.css">
 
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
@@ -71,7 +72,7 @@
 
     <!-- Question pour avoir un poisson -->
     <div class="fish_question_container">
-      <img class="crose" id="close_fish" src="assets/images/fleche.png" alt="Croix pour fermer le jeu">
+      <img class="crose" id="close_fish" src="assets/images/croix.png" alt="Croix pour fermer le jeu">
       <div class="fish_question">
         <div class="text">
           <h2>Un poisson contre une question</h2>
@@ -91,7 +92,7 @@
 
     <!-- Puzzle du moteur -->
     <div class="puzzle_container">
-      <img class="crose" id="close_puzzle" src="assets/images/fleche.png" alt="Croix pour fermer le jeu">
+      <img class="crose" id="close_puzzle" src="assets/images/croix.png" alt="Croix pour fermer le jeu">
       <h2>Reconstruis le moteur</h2>
       <div class="game_container">
         <div class="puzzle piece1"></div>
@@ -106,11 +107,35 @@
       </div>
     </div>
 
+    <!-- Enigme avec le code -->
+    <div class="code_container">
+      <img class="crose" id="close_code" src="assets/images/croix.png" alt="Croix pour fermer le jeu">
+      <h2>Trouve la combinaison</h2>
+      <div class="keypad_wrapper">
+        <div class="screen"></div>
+        <div class="flasher"></div>
+        <div class="error notification">Erreur</div>
+        <div class="success notification">Code bon</div>
+        
+        <div class="key">1</div>
+        <div class="key">2</div>
+        <div class="key">3</div>
+        <div class="key">4</div>
+        <div class="key">5</div>
+        <div class="key">6</div>
+        <div class="key">7</div>
+        <div class="key">8</div>
+        <div class="key">9</div>
+        <div class="key last">0</div>
+      </div>
+    </div>
+
     <script src="assets/js/scene.js"></script>
     <script src="assets/js/dialogue.js"></script>
     <script src="assets/js/text_animation.js"></script>
     <script src="assets/js/main.js"></script>
     <script src="assets/js/fish.js"></script>
     <script src="assets/js/puzzle.js"></script>
+    <script src="assets/js/code.js"></script>
   </body>
 </html>
