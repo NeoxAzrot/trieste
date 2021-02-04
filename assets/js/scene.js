@@ -207,7 +207,7 @@ const initScene = () => {
   $('.menu').fadeOut()
   $('.container').fadeIn()
 
-  sceneIndex = 4
-  chapitreIndex = 1
+  sceneIndex = 0
+  chapitreIndex = 0
   moveToScene(chapitreIndex, sceneIndex)
 }
