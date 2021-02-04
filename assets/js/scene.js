@@ -12,18 +12,33 @@ const chapitres = [
         x: -730,
         y: -600,
         scale: 1.4,
-        arrowLeft: false
+        arrowLeft: false,
+        sound: new Howl({
+          src: ['assets/sounds/' + 'scene1.mp3'],
+          loop: true,
+          volume: 1
+        })
       },
       {
         x: -1600,
         y: -720,
-        scale: 2.1
+        scale: 2.1,
+        sound: new Howl({
+          src: ['assets/sounds/' + 'scene2.mp3'],
+          loop: true,
+          volume: 1
+        })
       },
       {
         x: -2500,
         y: -800,
         scale: 1.5,
-        arrowRight: false
+        arrowRight: false,
+        sound: new Howl({
+          src: ['assets/sounds/' + 'scene3.mp3'],
+          loop: true,
+          volume: 1
+        })
       }
     ]
   },
@@ -33,17 +48,32 @@ const chapitres = [
         x: -3230,
         y: -800,
         scale: 1.6,
-        arrowLeft: false
+        arrowLeft: false,
+        sound: new Howl({
+          src: ['assets/sounds/' + 'scene4.mp3'],
+          loop: true,
+          volume: 1
+        })
       },
       {
         x: -700,
         y: -1550,
-        scale: 1.4
+        scale: 1.4,
+        sound: new Howl({
+          src: ['assets/sounds/' + 'scene5.mp3'],
+          loop: true,
+          volume: 1
+        })
       },
       {
         x: -1400,
         y: -1280,
-        scale: 1.9
+        scale: 1.9,
+        sound: new Howl({
+          src: ['assets/sounds/' + 'scene6.mp3'],
+          loop: true,
+          volume: 1
+        })
       },
       {
         x: -1800,
@@ -71,6 +101,7 @@ let sceneIndex
 
 const moveToScene = (chapitreIndex, sceneIndex) => {
   let scale = chapitres[chapitreIndex].scenes[sceneIndex].scale
+  let sound = chapitres[chapitreIndex].scenes[sceneIndex].sound
 
   let x = chapitres[chapitreIndex].scenes[sceneIndex].x 
   let y = chapitres[chapitreIndex].scenes[sceneIndex].y
@@ -90,7 +121,9 @@ const moveToScene = (chapitreIndex, sceneIndex) => {
     duration: 2,
     scale
   })
+
   showArrow()
+  playSound(sound)
 }
 
 // Fonctions pour les flèches
@@ -98,17 +131,24 @@ const leftArrow = $('#previous')
 const rightArrow = $('#next')
 
 leftArrow.click(() => {
-  if(sceneIndex != 0) sceneIndex--
+  // On arrête le son avant de passer à l'autre scène pour ne pas en jouer à l'infini
+  stopSound()
+
+  if(sceneIndex != 0) sceneIndex-- // Nombre minimum d'oeuvre
   
   moveToScene(chapitreIndex, sceneIndex)
 })
 
 rightArrow.click(() => {
-  if(sceneIndex != 8) sceneIndex++
+  // On arrête le son avant de passer à l'autre scène pour ne pas en jouer à l'infini
+  stopSound()
+
+  if(sceneIndex != chapitres[chapitreIndex].scenes.length) sceneIndex++ // Nombre maximum d'oeuvre de la scène
   
   moveToScene(chapitreIndex, sceneIndex)
 })
 
+// Fonction pour afficher ou pas les flèches
 const showArrow = () => {
   if(chapitres[chapitreIndex].scenes[sceneIndex].arrowLeft == false) {
     leftArrow.fadeOut()
@@ -123,6 +163,21 @@ const showArrow = () => {
   }
 }
 
+// Fonction pour jouer la musique d'ambiance sur chaque scène
+const playSound = (sound) => {
+  if(sound) {
+    sound.play()
+  }
+}
+
+// Fonction pour jouer la musique d'ambiance sur chaque scène
+const stopSound = () => {
+  let = sound = chapitres[chapitreIndex].scenes[sceneIndex].sound
+  if(sound) {
+    sound.stop()
+  }
+}
+
 // Fonction d'initialisation
 const init = () => {
   $('.menu').fadeOut()
@@ -131,4 +186,12 @@ const init = () => {
   sceneIndex = 0
   chapitreIndex = 0
   moveToScene(chapitreIndex, sceneIndex)
+  // audio_menu.stop()
 }
+
+let audio_menu = new Howl({
+  src: ['assets/sounds/' + 'intro.mp3'],
+  loop: true,
+  volume: 1
+})
+audio_menu.play()

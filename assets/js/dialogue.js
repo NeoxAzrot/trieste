@@ -30,6 +30,36 @@ const dialogs = {
       }
     ]
   },
+  dame_blanche_success: {
+    img: 'dame_blanche.png',
+    text: [
+      {
+        user_talking: false,
+        text: 'Tu as de la monnaie, vieux crabe ?'
+      },
+      {
+        user_talking: true,
+        text: 'J’ai juste le compte, faites-moi embarquer !'
+      }
+    ]
+  },
+  dame_blanche_soldat: {
+    img: 'dame_blanche.png',
+    text: [
+      {
+        user_talking: true,
+        text: 'Moi aussi c’est bon j\'ai l\'acompte.'
+      },
+      {
+        user_talking: false,
+        text: 'Je ne compte que deux pièces.'
+      },
+      {
+        user_talking: true,
+        text: 'Diantre !!! Au voleur, au voleur ! Quel est le truand qui a encore frappé !'
+      }
+    ]
+  },
   homme_qui_mange: {
     img: 'homme_qui_mange.png',
     text: [
@@ -125,6 +155,12 @@ const checkDialogWithObject = (id) => {
     nb_fishs--
     nb_coins++
     $('#homme_qui_mange').hide()
+  }
+
+  if(id == 'dame_blanche' && nb_coins >= 1) {
+    data_id = 'dame_blanche_success'
+    nb_coins -= 3
+    $('#dame_blanche').hide()
   }
 }
 

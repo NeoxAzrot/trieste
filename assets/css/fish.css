@@ -40,7 +40,7 @@
 }
 
 .fish_question h2 {
-  font-family: var(--black-rose);
+  font-family: var(--title-font);
   color: var(--black);
   font-size: 64px;
   position: relative;
@@ -59,23 +59,23 @@
 }
 
 .fish_question p {
-  font-family: var(--type-writter);
+  font-family: var(--main-font);
   color: var(--black);
-  font-size: 22px;
+  font-size: 24px;
   margin-top: 50px;
 }
 
 .fish_question h4 {
-  font-family: var(--type-writter);
+  font-family: var(--main-font);
   color: var(--black);
-  font-size: 26px;
+  font-size: 28px;
   margin-top: 60px;
 }
 
 .fish_question input {
-  font-family: var(--type-writter);
+  font-family: var(--main-font);
   color: var(--black);
-  font-size: 18px;
+  font-size: 22px;
   margin-top: 20px;
   padding: 10px;
   outline: none;
@@ -92,7 +92,8 @@
 }
 
 .fish_question .input p {
-  font-size: 18px;
+  font-size: 22px;
   margin-top: 10px;
   display: none;
+  font-weight: bold;
 }

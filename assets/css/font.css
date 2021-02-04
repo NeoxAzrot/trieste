@@ -1,9 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Arapey&display=swap');
+
 @font-face {
   font-family: "Black Rose";
   src: url('../fonts/blackrose.ttf') format("truetype");
-} 
+}
 
  @font-face {
   font-family: "Type Writter";
   src: url('../fonts/typewritter.ttf') format("truetype");
+}
+
+@font-face {
+  font-family: "Otto Attack Type";
+  src: url('../fonts/ottoattactype.ttf') format("truetype");
 }

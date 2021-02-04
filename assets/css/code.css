@@ -31,7 +31,7 @@
 }
 
 .code_container h2 {
-  font-family: var(--black-rose);
+  font-family: var(--title-font);
   color: var(--black);
   font-size: 64px;
   position: relative;
@@ -81,7 +81,7 @@
 	color: var(--beige);
 	padding: 0px 15px 0px 15px;
 	letter-spacing: 26px;
-	font-family: var(--type-writter);
+	font-family: var(--main-font);
 	position: relative;
 }
 
@@ -109,7 +109,7 @@
 }
 
 .key{
-  font-family: var(--black-rose);
+  font-family: var(--title-font);
   text-transform: uppercase;
 	width: 75px;
 	height: 75px;
@@ -149,7 +149,7 @@
 
 .notification{
 	color: var(--beige);
-	font-family: var(--black-rose);
+	font-family: var(--title-font);
 	text-align: center;
 	font-size: 40px;
 	position: absolute;

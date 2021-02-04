@@ -2,8 +2,8 @@
   --white: #e4e4e4;
   --black: #222222;
   --beige: #c3b297;
-  --black-rose: "Black Rose", serif;
-  --type-writter: "Type Writter", sans-serif;
+  --title-font: "Otto Attack Type", serif;
+  --main-font: "Arapey", serif;
 }
 
 * {
@@ -45,7 +45,7 @@ body {
   left: 0;
 }
 
-.container.blur {
+.container.blur .fresque_container {
   filter: blur(4px);
 }
 
@@ -89,18 +89,25 @@ body {
   right: 30px;
 }
 
+.crose {
+  width: 30px;
+  height: 30px;
+}
+
 /* Dialogue */
 .dialog_container {
   position: absolute;
-  bottom: 10%;
-  left: 50%;
-  transform: translateX(-50%);
+  bottom: 0;
+  left: 0;
   z-index: 20;
-  width: 100%;
+  width: 100vw;
+  height: 100vh;
 }
 
 .dialog{
   position: relative;
+  width: 100%;
+  height: 100%;
 }
 
 .dialog .images img {
@@ -109,15 +116,15 @@ body {
   filter : brightness(0.4);
   transition: 0.4s ease;
   z-index: 2;
-  max-width: 400px;
+  max-height: 400px;
 }
 
 .dialog .images img:nth-child(1) {
-  left: 40px;
+  left: 60px;
 }
 
 .dialog .images img:nth-child(2) {
-  right: 40px;
+  right: 60px;
 }
 
 .dialog .text {
@@ -125,38 +132,27 @@ body {
   position: absolute;
   bottom: 10%;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-54%);
   color: var(--white);
-  background-color: rgba(0, 0, 0, 0.3);
-  box-shadow: 0 0 50px 50px rgba(0, 0, 0, 0.3);
-  border-radius: 10px;
-  padding: 20px 20px;
-  font-family: var(--type-writter);
+  padding: 10px;
+  font-family: var(--main-font);
   z-index: 3;
   text-align: center;
+  font-size: 22px;
+}
+
+.dialog .background_text {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  width: 100vw;
+  height: auto;
 }
 
 .dialog img.talking {
   filter : brightness(1.1);
-}
-
-.dialog::before, .dialog::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  width: 17%;
-  height: 2px;
-  background-color: var(--white);
-  z-index: 10;
-  border-radius: 8px;
-}
-
-.dialog::before {
-  left: 30%;
-}
-
-.dialog::after {
-  right: 30%;
 }
 
 /* Menu */
@@ -184,7 +180,7 @@ body {
 }
 
 .menu h1 {
-  font-family: var(--black-rose);
+  font-family: var(--title-font);
   color: var(--black);
   font-size: 96px;
   position: relative;
@@ -205,9 +201,9 @@ body {
 }
 
 .menu p {
-  font-family: var(--type-writter);
+  font-family: var(--main-font);
   color: var(--black);
-  font-size: 18px;
+  font-size: 22px;
   margin-top: 40px;
   opacity: 0;
   animation: opacity 0.8s ease forwards;
@@ -215,7 +211,7 @@ body {
 }
 
 .menu .start {
-  font-family: var(--black-rose);
+  font-family: var(--title-font);
   font-size: 26px;
   padding: 20px 40px;
   border: 2px solid var(--black);

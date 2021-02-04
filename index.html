@@ -28,7 +28,7 @@
         <p>Une histoire interactive <b>point and click</b> en ligne qui vous propose une expérience culturelle et artistique autour d’un univers sombre et immersif dans les fonds marins.</p>
         <p>Trouver <b>des indices</b> dans les tableaux pour aider <i>César</i>, un vieux crabe issu d’une nature morte, à retrouver son habitat naturel.</p>
         <div class="start" onclick="init()">Commencer</div>
-        <p style="margin-top: 10px;"><u>PS :</u> cette expérience contient une <b>ambiance musicale</b>, veuillez activer le son.</p>
+        <p style="margin-top: 10px;"><u>PS</u> : cette expérience contient une <b>ambiance musicale</b>, veuillez activer le son.</p>
       </div>
     </section>
 
@@ -44,7 +44,9 @@
     <section class="container" style="display: none;">
       <div class="container_transform">
         <div class="container_relative">
-          <img src="assets/images/fresque.png" class="fresque">
+          <div class="fresque_container">
+            <img src="assets/images/fresque.png" class="fresque">
+          </div>
           <div id="homme_parapluie" data-dialog-id="parapluie" class="interaction"></div>
           <div id="homme_qui_mange" data-dialog-id="homme_qui_mange" class="interaction after_dame"></div>
           <div id="homme_poisson" data-dialog-id="homme_poisson" class="interaction after_dame"></div>
@@ -67,6 +69,7 @@
           <img id="character" src="assets/images/dialogs/crabe.png">
         </div>
         <p class="text" id="app"></p>
+        <img class="background_text" src="assets/images/image_text.png" alt="Background du texte">
       </div>
     </div>
 

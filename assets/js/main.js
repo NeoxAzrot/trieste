@@ -31,9 +31,26 @@ const nextStep = (id) => {
   if(id == "tram") {
     $('.puzzle_container').addClass('show')
   }
+
+  // On fait le 2ème dialogue
+  if(id == "dame_blanche_success") {
+    let img = 'soldat.png'
+    data_id = 'dame_blanche_soldat'
+    $('#user').attr("src", "assets/images/dialogs/" + img)
+
+    showDialog(dialogs[data_id])
+  }
+
+  // On passe à l'autre chapitre
+  if(id == "dame_blanche_soldat") {
+    chapitreIndex++
+    sceneIndex = 0
+
+    moveToScene(chapitreIndex, sceneIndex)
+  }
 }
 
-// Pour le tram
+// Pour le coffre du soldat car il n'y a pas de dialogue
 $('#coffre_soldat').click(() => {
   $('.code_container').addClass('show')
 })

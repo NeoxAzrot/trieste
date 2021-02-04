@@ -54,7 +54,7 @@
 }
 
 .puzzle_container h2 {
-  font-family: var(--black-rose);
+  font-family: var(--title-font);
   color: var(--black);
   font-size: 64px;
   position: relative;
