@@ -53,7 +53,8 @@ const chapitres = [
           src: ['assets/sounds/' + 'scene4.mp3'],
           loop: true,
           volume: 1
-        })
+        }),
+        video: 'tableau4.mp4'
       },
       {
         x: -700,
@@ -63,7 +64,8 @@ const chapitres = [
           src: ['assets/sounds/' + 'scene5.mp3'],
           loop: true,
           volume: 1
-        })
+        }),
+        video: ''
       },
       {
         x: -1400,
@@ -73,23 +75,30 @@ const chapitres = [
           src: ['assets/sounds/' + 'scene6.mp3'],
           loop: true,
           volume: 1
-        })
+        }),
+        video: ''
       },
       {
         x: -1800,
         y: -1700,
-        scale: 1.3
+        scale: 1.3,
+        sound: '',
+        video: 'tableau7.mp4'
       },
       {
         x: -3000,
         y: -1750,
-        scale: 1.2
+        scale: 1.2,
+        sound: '',
+        video: 'tableau8.mp4'
       },
       {
         x: -1920,
         y: -1080,
         scale: 0.5,
-        arrowRight: false
+        arrowRight: false,
+        sound: '',
+        video: ''
       }
     ]
   }
@@ -102,6 +111,7 @@ let sceneIndex
 const moveToScene = (chapitreIndex, sceneIndex) => {
   let scale = chapitres[chapitreIndex].scenes[sceneIndex].scale
   let sound = chapitres[chapitreIndex].scenes[sceneIndex].sound
+  let video = chapitres[chapitreIndex].scenes[sceneIndex].video
 
   let x = chapitres[chapitreIndex].scenes[sceneIndex].x 
   let y = chapitres[chapitreIndex].scenes[sceneIndex].y
@@ -123,7 +133,12 @@ const moveToScene = (chapitreIndex, sceneIndex) => {
   })
 
   showArrow()
-  playSound(sound)
+
+  if(video) {
+    playVideo(video)
+  } else{
+    playSound(sound)
+  }
 }
 
 // Fonctions pour les flèches
