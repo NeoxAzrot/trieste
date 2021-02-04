@@ -1,30 +1,119 @@
-/* must match size of imge */
-#container {
-    width: 598px;
-    height: 568px;
+.puzzle_container {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  background: url('../images/menu.jpg') no-repeat fixed center;
+  transform: translateY(-100%);
+  transition: transform 0.6s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.puzzle_container.show {
+  transform: translateY(0);
+}
+
+.game_container.success {
+  animation: success 1s ease;
+  animation-delay: 0.4s;
+}
+
+@keyframes success {
+  0% {
+    transform: scale(1);
   }
-  .puzzle {
-     background-image:url(https://cdn.discordapp.com/attachments/797144621385646081/806446976757268520/Plan_de_travail_1.png);
-     width:185px;
-     height:185px;
-     float: left;
-     transition: 0.25s;
+  25% {
+    transform: scale(1.2);
   }
-  .piece1 { background-position: 0 0; }
-  .piece2 { background-position: -185px 0; }
-  .piece3 { background-position: -370px 0; }
-  .piece4 { background-position: 0 -185px; }
-  .piece5 { background-position: -185px -185px; }
-  .piece6 { background-position: -370px -185px; }
-  .piece7 { background-position: 0 -370px; }
-  .piece8 { background-position: -185px -370px; }
-  .piece9 { background-position: -370px -370px; }
-  
-  /* .piece1 { transform: rotate(90deg); }
-  .piece2 { transform: rotate(-90deg); }
-  .piece3 { transform: rotate(180deg); }
-  .piece4 { transform: rotate(90deg); }
-  .piece5 { transform: rotate(0deg); }
-  .piece6 { transform: rotate(-180deg); }
-  .piece7 { transform: rotate(-90deg); }
-  .piece8 { transform: rotate(-180deg); } */
+  50% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.crose {
+  position: absolute;
+  top: 60px;
+  left: 60px;
+  cursor: pointer;
+  transition: transform 0.4s ease;
+}
+
+.crose:hover {
+  transform: scale(1.1);
+}
+
+.puzzle_container h2 {
+  font-family: var(--black-rose);
+  color: var(--black);
+  font-size: 64px;
+  position: relative;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+}
+
+.puzzle_container h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  right: -60px;
+  width: 0;
+  height: 4px;
+  background: var(--black);
+  border-radius: 10px;
+}
+
+.puzzle_container.show h2::after {
+  animation: underline_puzzle 0.8s ease forwards;
+  animation-delay: 1.8s;
+}
+
+/* Doit correspondre à la taille de l'image */
+.puzzle_container .game_container {
+  width: 568px;
+  height: 568px;
+}
+
+.puzzle {
+  background-image:url('../images/puzzle.png');
+  width: 185px;
+  height: 185px;
+  float: left;
+  transition: 0.25s ease;
+  cursor: pointer;
+}
+
+.piece1 { background-position: 0 0; }
+.piece2 { background-position: -185px 0; }
+.piece3 { background-position: -370px 0; }
+.piece4 { background-position: 0 -185px; }
+.piece5 { background-position: -185px -185px; }
+.piece6 { background-position: -370px -185px; }
+.piece7 { background-position: 0 -370px; }
+.piece8 { background-position: -185px -370px; }
+.piece9 { background-position: -370px -370px; }
+
+@keyframes underline_puzzle {
+  0% {
+    right: 100%;
+    width: 0%;
+  }
+  90% {
+    right: -100px;
+    width: 30%;
+  }
+  100% {
+    right: -60px;
+    width: 30%;
+  }
+}

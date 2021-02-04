@@ -188,6 +188,7 @@ body {
   color: var(--black);
   font-size: 96px;
   position: relative;
+  text-transform: uppercase;
 }
 
 .menu h1::after {

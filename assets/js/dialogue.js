@@ -39,6 +39,27 @@ const dialogs = {
       }
     ]
   },
+  homme_qui_mange_success: {
+    img: 'homme_qui_mange.png',
+    text: [
+      {
+        user_talking: false,
+        text: 'Je donnerais tout pour manger du bon poisson...'
+      },
+      {
+        user_talking: true,
+        text: 'Ne vous inquiétez pas monsieur, j\'ai tout ce qu\'il vous faut sur moi.'
+      },
+      {
+        user_talking: false,
+        text: 'Mais que c\'est aimable. Prennez donc une pièce d\'or !'
+      },
+      {
+        user_talking: true,
+        text: 'Merci, grâce à vous je vais bientôt pouvoir prendre le large.'
+      }
+    ]
+  },
   tram: {
     img: 'tram.png',
     text: [
@@ -91,8 +112,21 @@ const dialogs = {
 let data_id = ''
 $('[data-dialog-id]').click(function () {
   data_id = $(this).attr('data-dialog-id')
+
+  // On check pour les spécificités
+  checkDialogWithObject(data_id)
   showDialog(dialogs[data_id])
 });
+
+// Fonction pour vérifier les dialogs en fonction des objets
+const checkDialogWithObject = (id) => {
+  if(id == 'homme_qui_mange' && nb_fishs >= 1) {
+    data_id = 'homme_qui_mange_success'
+    nb_fishs--
+    nb_coins++
+    $('#homme_qui_mange').hide()
+  }
+}
 
 // Fonction pour afficher et cacher les dialogues
 let index_dialog = 0
@@ -120,6 +154,7 @@ const hideDialog = () => {
   $('.dialog_container').fadeOut()
   $('.container').removeClass('blur')
   showArrow() // Pour garder que celles qu'il faut
+  showObjects() // Pour garder que celles qu'il faut
 }
 
 // Fonction pour passer à la prochaine phrase dans le dialogue

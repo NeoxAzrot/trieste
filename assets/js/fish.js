@@ -4,12 +4,17 @@ $('#fish_answer').on('input', () => {
   if(answer == 'emeraude') {
     $('#fish_answer').prop('disabled', true)
     $('.right_answer').fadeIn()
+    $('#homme_poisson').hide()
 
     setTimeout(() => {
       $('.fish_question_container').removeClass('show')
   
-      nb_coins++
+      nb_fishs++
       showObjects()
     }, 2000)
   }
 });
+
+$('#close_fish').click(() => {
+  $('.fish_question_container').removeClass('show')
+})

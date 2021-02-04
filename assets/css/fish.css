@@ -18,6 +18,18 @@
   transform: translateY(0);
 }
 
+.crose {
+  position: absolute;
+  top: 60px;
+  left: 60px;
+  cursor: pointer;
+  transition: transform 0.4s ease;
+}
+
+.crose:hover {
+  transform: scale(1.1);
+}
+
 .fish_question {
   display: flex;
   justify-content: center;
@@ -32,6 +44,7 @@
   color: var(--black);
   font-size: 64px;
   position: relative;
+  text-transform: uppercase;
 }
 
 .fish_question h2::after {

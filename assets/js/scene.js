@@ -9,18 +9,18 @@ const chapitres = [
   {
     scenes: [
       {
-        x: -540,
-        y: -597,
+        x: -730,
+        y: -600,
         scale: 1.4,
         arrowLeft: false
       },
       {
-        x: -1700,
+        x: -1600,
         y: -720,
         scale: 2.1
       },
       {
-        x: -2620,
+        x: -2500,
         y: -800,
         scale: 1.5,
         arrowRight: false
@@ -30,35 +30,35 @@ const chapitres = [
   {
     scenes: [
       {
-        x: -3680,
-        y: -760,
+        x: -3230,
+        y: -800,
         scale: 1.6,
         arrowLeft: false
       },
       {
-        x: -500,
+        x: -700,
         y: -1550,
         scale: 1.4
       },
       {
         x: -1400,
-        y: -1500,
+        y: -1280,
         scale: 1.9
       },
       {
-        x: -1650,
-        y: -1600,
+        x: -1800,
+        y: -1700,
         scale: 1.3
       },
       {
-        x: -2700,
-        y: -1550,
+        x: -3000,
+        y: -1750,
         scale: 1.2
       },
       {
-        x: -1150,
-        y: -700,
-        scale: 0.52,
+        x: -1920,
+        y: -1080,
+        scale: 0.5,
         arrowRight: false
       }
     ]

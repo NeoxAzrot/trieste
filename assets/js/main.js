@@ -1,10 +1,15 @@
-let nb_fish = 0
+let nb_fishs = 0
 let nb_coins = 0
+let after_dame_done = false
 
 // Fonction pour activer les autres point and click
 const nextStep = (id) => {
   if(id == "dame_blanche") {
-    $('.interaction.after_dame').show()
+    // Pour ne pas glitch le jeu et refaire à l'infini les intéractions
+    if(!after_dame_done) {
+      $('.interaction.after_dame').show()
+      after_dame_done = true
+    }
   }
 
   // Pour l'homme poisson
@@ -21,23 +26,32 @@ const nextStep = (id) => {
       .typeString('Qui est-elle ?')
       .start()
   }
+
+    // Pour le tram
+    if(id == "tram") {
+      $('.puzzle_container').addClass('show')
+    }
 }
 
 // Fonction pour afficher les objets
 const showObjects = () => {
   if(nb_coins == 1) {
-    $('.piece1').fadeIn()
+    $('.coin1').show()
   } else if(nb_coins == 2) {
-    $('.piece1').fadeOut()
-    $('.piece2').fadeIn()
+    $('.coin1').hide()
+    $('.coin2').show()
   } else if(nb_coins == 3) {
-    $('.piece2').fadeOut()
-    $('.piece3').fadeIn()
+    $('.coin2').hide()
+    $('.coin3').show()
+  } else {
+    $('.coin1').hide()
+    $('.coin2').hide()
+    $('.coin3').hide()
   }
 
-  if(nb_fish == 1) {
-    $('.fish').fadeIn()
+  if(nb_fishs == 1) {
+    $('.fish').show()
   } else {
-    $('.fish').fadeOut()
+    $('.fish').hide()
   }
 }
