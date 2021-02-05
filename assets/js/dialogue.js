@@ -194,6 +194,7 @@ const showDialog = (dialog) => {
 }
 
 const hideDialog = () => {
+  $('#character').attr("src", "")
   $('.dialog_container').fadeOut()
   $('.container').removeClass('blur')
   showArrow() // Pour garder que celles qu'il faut

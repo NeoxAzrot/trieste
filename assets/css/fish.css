@@ -1,4 +1,3 @@
-/* Menu */
 .fish_question_container {
   width: 100vw;
   height: 100vh;
@@ -47,7 +46,7 @@
   position: relative;
   text-transform: uppercase;
   text-align: center;
-  background: url('../images/background_title.png');
+  background: url('../images/background_title.jpg');
   background-attachment: fixed;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
