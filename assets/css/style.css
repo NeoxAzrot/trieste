@@ -2,6 +2,7 @@
   --white: #e4e4e4;
   --black: #222222;
   --beige: #c3b297;
+  --yellow: #d18500;
   --title-font: "Otto Attack Type", serif;
   --main-font: "Arapey", serif;
 }
@@ -13,8 +14,8 @@
 }
 
 *::selection {
-  color: var(--black);
-  background: var(--beige);
+  color: var(--white);
+  background: var(--yellow);
 }
 
 html {
@@ -118,6 +119,7 @@ body {
   transition: 0.4s ease;
   z-index: 2;
   max-height: 400px;
+  max-width: 400px;
 }
 
 .dialog .images img:nth-child(1) {
@@ -164,7 +166,7 @@ body {
   top: 0;
   left: 0;
   z-index: 9999;
-  background: url('../images/menu.jpg') no-repeat fixed center;
+  background: url('../images/background_menu.jpg') no-repeat fixed center;
   background-size: cover;
   display: flex;
   justify-content: center;
@@ -182,29 +184,21 @@ body {
 
 .menu h1 {
   font-family: var(--title-font);
-  color: var(--black);
-  font-size: 96px;
+  color: var(--white);
+  font-size: 108px;
   position: relative;
   text-transform: uppercase;
   text-align: center;
-}
-
-.menu h1::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  right: -60px;
-  width: 0;
-  height: 4px;
-  background: var(--black);
-  border-radius: 10px;
-  animation: underline 0.8s ease forwards;
-  animation-delay: 0.4s;
+  background: url('../images/background_title.png');
+  background-attachment: fixed;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+          background-clip: text;
 }
 
 .menu p {
   font-family: var(--main-font);
-  color: var(--black);
+  color: var(--yellow);
   font-size: 22px;
   margin-top: 40px;
   opacity: 0;
@@ -212,39 +206,42 @@ body {
   animation-delay: 1.2s;
 }
 
+.menu .audio {
+  margin-top: 10px;
+}
+
+.menu .audio i {
+  color: var(--yellow);
+  font-size: 22px;
+  margin-top: 20px;
+  opacity: 0;
+  animation: opacity 0.8s ease forwards;
+  animation-delay: 1.2s;
+}
+
+.menu .audio p {
+  margin-top: 5px;
+  font-size: 18px;
+}
+
 .menu .start {
-  font-family: var(--title-font);
-  font-size: 26px;
-  padding: 20px 40px;
-  border: 2px solid var(--black);
+  font-family: var(--main-font);
+  font-size: 36px;
+  padding: 10px 40px;
+  border: 2px solid var(--yellow);
   border-radius: 8px;
-  transition: 0.4 ease;
+  transition: 0.4s ease;
   cursor: pointer;
-  color: var(--white);
-  background: var(--black);
+  color: var(--yellow);
   margin-top: 80px;
   text-transform: uppercase;
+  background: none;
 }
 
 .menu .start:hover {
-  color: #f3f3f3;
-  background: #111111;
-  border-color: #111111;
-}
-
-@keyframes underline {
-  0% {
-    right: 100%;
-    width: 0%;
-  }
-  90% {
-    right: -100px;
-    width: 60%;
-  }
-  100% {
-    right: -60px;
-    width: 60%;
-  }
+  color: var(--black);
+  background: var(--yellow);
+  border-color: var(--yellow);
 }
 
 @keyframes opacity {

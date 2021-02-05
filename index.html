@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="icon" type="image/png" href="assets/images/dialogs/crabe.png" />
 
-    <!-- External link -->
     <link rel="stylesheet" href="assets/css/font.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/position.css">
@@ -16,6 +15,8 @@
     <link rel="stylesheet" href="assets/css/video.css">
     <link rel="stylesheet" href="assets/css/loader.css">
 
+    <!-- External link -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css">
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
     <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
@@ -50,12 +51,15 @@
         <p>Une histoire interactive <b>point and click</b> en ligne qui vous propose une expérience culturelle et artistique autour d’un univers sombre et immersif dans les fonds marins.</p>
         <p>Trouver <b>des indices</b> dans les tableaux pour aider <i>César</i>, un vieux crabe issu d’une nature morte, à retrouver son habitat naturel.</p>
         <div class="start" onclick="playVideo('intro.mp4')">Commencer</div>
-        <p style="margin-top: 10px;"><u>PS</u> : cette expérience contient une <b>ambiance musicale</b>, veuillez activer le son.</p>
+        <div class="audio">
+          <i class="fas fa-headphones-alt"></i>
+          <p>Cette expérience contient une <b>ambiance musicale</b>, veuillez activer le son.</p>
+        </div>
       </div>
     </section>
 
     <!-- Les vidéos -->
-    <div class="start_video" onclick="playVideo()">Voir la vidéo</div>
+    <div class="start_video" onclick="playVideo()" style="display: none;">Voir la vidéo</div>
     <section class="video_container">
       <img class="crose" id="close_video" src="assets/images/light_croix.png" alt="Croix pour fermer la vidéo">
       <div class="video_container_player">
@@ -108,7 +112,7 @@
 
     <!-- Question pour avoir un poisson -->
     <div class="fish_question_container">
-      <img class="crose" id="close_fish" src="assets/images/croix.png" alt="Croix pour fermer le jeu">
+      <img class="crose" id="close_fish" src="assets/images/light_croix.png" alt="Croix pour fermer le jeu">
       <div class="fish_question">
         <div class="text">
           <h2>Un poisson contre une question</h2>
@@ -120,7 +124,7 @@
           <h4 id="question">Qui est-elle ?</h4>
         </div>
         <div class="input">
-          <input type="text" id="fish_answer">
+          <input type="text" id="fish_answer" placeholder="Votre réponse...">
           <p class="right_answer">Bravo ! Vous gagnez un poisson.</p>
         </div>
       </div>
@@ -128,7 +132,7 @@
 
     <!-- Puzzle du moteur -->
     <div class="puzzle_container">
-      <img class="crose" id="close_puzzle" src="assets/images/croix.png" alt="Croix pour fermer le jeu">
+      <img class="crose" id="close_puzzle" src="assets/images/light_croix.png" alt="Croix pour fermer le jeu">
       <h2>Reconstruis le moteur</h2>
       <div class="game_container">
         <div class="puzzle piece1"></div>
@@ -145,7 +149,7 @@
 
     <!-- Enigme avec le code -->
     <div class="code_container">
-      <img class="crose" id="close_code" src="assets/images/croix.png" alt="Croix pour fermer le jeu">
+      <img class="crose" id="close_code" src="assets/images/light_croix.png" alt="Croix pour fermer le jeu">
       <h2>Trouve la combinaison</h2>
       <div class="keypad_wrapper">
         <div class="screen"></div>

@@ -36,12 +36,12 @@
 }
 
 .start_video {
-  font-family: var(--title-font);
+  font-family: var(--main-font);
   font-size: 26px;
-  padding: 20px 40px;
+  padding: 10px 40px;
   border: 2px solid var(--black);
   border-radius: 8px;
-  transition: 0.4 ease;
+  transition: 0.4s ease;
   cursor: pointer;
   color: var(--white);
   background: var(--black);

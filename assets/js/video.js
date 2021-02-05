@@ -11,6 +11,8 @@ const playVideo = (url = chapitres[chapitreIndex].scenes[sceneIndex].video) => {
 
     setTimeout(() => {
       sound_menu.stop()
+      $('.menu').hide()
+      $('.container').show()
     }, 1000)
   } else {
     stopSound()
@@ -24,7 +26,6 @@ const playVideo = (url = chapitres[chapitreIndex].scenes[sceneIndex].video) => {
 
 videoPlayer.addEventListener('ended', () => {
   videoPlayerContainer.fadeOut()
-  videoPlayerButton.fadeIn()
   
   if(playIntro) {
     initScene()
@@ -34,6 +35,9 @@ videoPlayer.addEventListener('ended', () => {
     }, 800);
   } else {
     playSound(chapitres[chapitreIndex].scenes[sceneIndex].sound)
+
+    // Pour ne pas afficher le bouton à la première scène
+    videoPlayerButton.fadeIn()
   }
 })
 
