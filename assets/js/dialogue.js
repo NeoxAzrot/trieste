@@ -175,10 +175,10 @@ let index_dialog = 0
 
 const showDialog = (dialog) => {
   if(index_dialog == 0) {
+    $('#character').attr("src", "assets/images/dialogs/" + dialog.img)
     $('.dialog_container').fadeIn()
     $('.container').addClass('blur')
     $('.arrow').hide()
-    $('#character').attr("src", "assets/images/dialogs/" + dialog.img)
   }
 
   if(dialog.text[index_dialog].user_talking) {

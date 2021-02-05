@@ -7,7 +7,7 @@ const typeAnimation = (text) => {
   })
 
   typewriter
-    .pauseFor(500)
+    .pauseFor(200)
     .typeString(text)
     .start()
     .callFunction(() => {

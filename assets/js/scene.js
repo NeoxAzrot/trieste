@@ -138,10 +138,12 @@ const moveToScene = (chapitreIndex, sceneIndex) => {
   showArrow()
 
   if(video) {
-    playVideo(video)
+    $('.start_video').fadeIn()
   } else{
-    playSound(sound)
+    $('.start_video').fadeOut()
   }
+
+  playSound(sound)
 }
 
 // Fonctions pour les flèches

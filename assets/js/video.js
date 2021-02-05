@@ -1,31 +1,47 @@
-const videoPlayer = document.querySelector('#video')
-const videoPlayerContainer = document.querySelector('.video_container')
+const videoPlayer = document.querySelector('#video') // Car ne fonctionne pas en jquery
+const videoPlayerContainer = $('.video_container')
+const videoPlayerButton = $('.start_video')
 
 let playIntro = true
 
-const playVideo = (url) => {
+const playVideo = (url = chapitres[chapitreIndex].scenes[sceneIndex].video) => {
   if(playIntro) {
     sound_menu.fade(1, 0, 1000)
+    $('#close_video').hide()
 
     setTimeout(() => {
       sound_menu.stop()
     }, 1000)
+  } else {
+    stopSound()
   }
 
   videoPlayer.setAttribute('src', 'assets/videos/' + url)
-  videoPlayerContainer.style.zIndex = "9999"
-  videoPlayerContainer.classList.add('show')
+  videoPlayerContainer.fadeIn()
+  videoPlayerButton.fadeOut()
   videoPlayer.play()
 }
 
 videoPlayer.addEventListener('ended', () => {
-  videoPlayerContainer.classList.remove('show')
-  setTimeout(() => {
-    videoPlayerContainer.style.zIndex = "-1"
-  }, 800);
+  videoPlayerContainer.fadeOut()
+  videoPlayerButton.fadeIn()
   
   if(playIntro) {
     initScene()
     playIntro = false
+    setTimeout(() => {
+      $('#close_video').show()
+    }, 800);
+  } else {
+    playSound(chapitres[chapitreIndex].scenes[sceneIndex].sound)
   }
+})
+
+$('#close_video').click(() => {
+  videoPlayer.pause()
+
+  videoPlayerContainer.fadeOut()
+  videoPlayerButton.fadeIn()
+
+  playSound(chapitres[chapitreIndex].scenes[sceneIndex].sound)
 })

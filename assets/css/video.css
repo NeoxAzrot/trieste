@@ -4,21 +4,60 @@
   position: fixed;
   top: 0;
   left: 0;
-  z-index: -1;
+  z-index: 9999;
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: 1s ease forwards;
+  flex-direction: column;
   background: #000;
-  transition: opacity 0.8s ease;
-  opacity: 0;
+  display: none;
 }
 
-.video_container.show {
-  opacity: 1;
+.video_container_player {
+  width: 100%;
+  height: 100%;
 }
 
 #video {
   max-width: 100vw;
   max-height: 100vh;
+}
+
+.crose {
+  position: absolute;
+  top: 60px;
+  left: 60px;
+  cursor: pointer;
+  transition: transform 0.4s ease;
+}
+
+.crose:hover {
+  transform: scale(1.1);
+}
+
+.start_video {
+  font-family: var(--title-font);
+  font-size: 26px;
+  padding: 20px 40px;
+  border: 2px solid var(--black);
+  border-radius: 8px;
+  transition: 0.4 ease;
+  cursor: pointer;
+  color: var(--white);
+  background: var(--black);
+  margin-top: 80px;
+  text-transform: uppercase;
+  text-align: center;
+  width: 300px;
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+.start_video:hover {
+  color: #f3f3f3;
+  background: #111111;
+  border-color: #111111;
 }
