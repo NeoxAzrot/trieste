@@ -138,6 +138,12 @@ const dialogs = {
   }
 }
 
+const sound_dialog = new Howl({
+  src: ['assets/sounds/' + 'dialog.mp3'],
+  loop: true,
+  volume: 1
+})
+
 // Fonction pour les clicks des dialogs
 let data_id = ''
 $('[data-dialog-id]').click(function () {
@@ -183,6 +189,7 @@ const showDialog = (dialog) => {
     $('#user').removeClass('talking')
   }
 
+  sound_dialog.play()
   typeAnimation(dialog.text[index_dialog].text)
 }
 
@@ -205,4 +212,9 @@ const nextDialog = () => {
   } else {
     showDialog(dialogs[data_id])
   }
+}
+
+// Fonction pour arrêter le son du dialogue
+const stopSoundDialog = () => {
+  sound_dialog.stop()
 }

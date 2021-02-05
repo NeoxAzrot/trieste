@@ -34,6 +34,7 @@
   font-size: 96px;
   position: relative;
   text-transform: uppercase;
+  text-align: center;
 }
 
 .loader_container h1::after {

@@ -61,6 +61,7 @@
   position: relative;
   margin-bottom: 40px;
   text-transform: uppercase;
+  text-align: center;
 }
 
 .puzzle_container h2::after {

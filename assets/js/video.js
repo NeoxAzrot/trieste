@@ -5,7 +5,11 @@ let playIntro = true
 
 const playVideo = (url) => {
   if(playIntro) {
-    sound_menu.stop()
+    sound_menu.fade(1, 0, 1000)
+
+    setTimeout(() => {
+      sound_menu.stop()
+    }, 1000)
   }
 
   videoPlayer.setAttribute('src', 'assets/videos/' + url)

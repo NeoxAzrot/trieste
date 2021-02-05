@@ -1,7 +1,6 @@
 .interaction {
   position: absolute;
   border-radius: 50px;
-  border: 4px solid var(--white);
   background: var(--white);
   z-index: 1;
   cursor: pointer;
@@ -56,7 +55,7 @@
 #dame_blanche {
   top: 27%;
   left: 60.5%;
-  width: 6.5%;
+  width: 5%;
   height: 22%;
 }
 

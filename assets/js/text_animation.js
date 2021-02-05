@@ -10,6 +10,9 @@ const typeAnimation = (text) => {
     .pauseFor(500)
     .typeString(text)
     .start()
+    .callFunction(() => {
+      stopSoundDialog()
+    })
     .pauseFor(1500)
     .callFunction(() => {
       nextDialog()

@@ -1,5 +1,16 @@
+const sound_fish = new Howl({
+  src: ['assets/sounds/' + 'fish.mp3'],
+  loop: true,
+  volume: 1
+})
+
 $('#fish_answer').on('input', () => {
   let answer = $('#fish_answer').val().toLowerCase().replace('é', 'e')
+
+  sound_fish.play()
+  setTimeout(() => {
+    sound_fish.stop()
+  }, 150);
   
   if(answer == 'emeraude') {
     $('#fish_answer').prop('disabled', true)

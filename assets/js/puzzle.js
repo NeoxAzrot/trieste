@@ -1,5 +1,10 @@
 const puzzles = $('.puzzle')
 
+const sound_puzzle = new Howl({
+  src: ['assets/sounds/' + 'puzzle.mp3'],
+  volume: 1
+})
+
 puzzles.each(function () {
   const rotation = 90 * Math.round(Math.random() * 3)
   this.setAttribute('data-rotation', rotation)
@@ -11,19 +16,19 @@ puzzles.on('click', function () {
     let rotation = this.getAttribute('data-rotation')
     // Ici on transforme une chaîne de caractères en entier
     rotation = parseInt(rotation)
-  
-    if (rotation === 270) {
-      rotation = 0
-    } else {
-      rotation += 90
-    }
+    rotation += 90
   
     this.setAttribute('data-rotation', rotation)
     this.style.transform = 'rotate(' + rotation + 'deg)'
   
     checkPuzzlePieces ()
+    playSoundPuzzle()
   }
 });
+
+const playSoundPuzzle = () => {
+  sound_puzzle.play()
+}
 
 let completed = false
 function checkPuzzlePieces () {
@@ -33,7 +38,7 @@ function checkPuzzlePieces () {
   puzzles.each(function () {
     rotation = this.getAttribute('data-rotation')
     rotation = parseInt(rotation)
-    if (rotation != 0) {
+    if (rotation % 360 != 0) {
       completed = false
     }
   })

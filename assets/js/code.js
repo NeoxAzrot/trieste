@@ -2,16 +2,22 @@ const password = 1806
 let tries
 let disabled = false
 
+const sound_code= new Howl({
+  src: ['assets/sounds/' + 'code.mp3'],
+  volume: 1
+})
+
 $(document).ready(function() {
 	start()
 })
-
 
 function start(){
 	tries = 0
 	
 	$(".key").click(function(){
     if(!disabled) {
+      sound_code.play()
+      
       var n = $(this).html()
       $('.screen').append( n )
       tries++
@@ -29,6 +35,7 @@ function updateFlasher(){
 		})
 	}
 	else{
+    disabled = true
 		$('.flasher').css({
 			'left' : '40px',
 			'display' : 'none'
