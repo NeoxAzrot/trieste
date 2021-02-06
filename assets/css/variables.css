@@ -14,3 +14,12 @@
   font-family: "Otto Attack Type";
   src: url('../fonts/ottoattactype.ttf') format("truetype");
 }
+
+:root {
+  --white: #e4e4e4;
+  --black: #222222;
+  --beige: #c3b297;
+  --yellow: #d18500;
+  --title-font: "Otto Attack Type", serif;
+  --main-font: "Arapey", serif;
+}

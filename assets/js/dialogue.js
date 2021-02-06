@@ -5,7 +5,7 @@ const dialogs = {
     text: [
       {
         user_talking: false,
-        text: 'Dégage de la, laisse-moi tranquille !'
+        text: 'Dégage de là, laisse-moi tranquille !'
       },
       {
         user_talking: true,
@@ -18,11 +18,11 @@ const dialogs = {
     text: [
       {
         user_talking: false,
-        text: 'Embarquement, embarquement, 3 pièces d’or seulement, départ dans 15 min.'
+        text: 'Embarquement, embarquement, 3 pièces d\'or seulement, départ dans 15 min.'
       },
       {
         user_talking: true,
-        text: 'J’ai pas un sous, il n’y a pas d’autre solution que des pièces d’or ?'
+        text: 'Je n\'ai pas un sou, il ny\' a pas d\'autres solutions que des pièces d\'or ?'
       },
       {
         user_talking: false,
@@ -39,7 +39,7 @@ const dialogs = {
       },
       {
         user_talking: true,
-        text: 'J’ai juste le compte, faites-moi embarquer !'
+        text: 'J\'ai juste le compte, faites-moi embarquer !'
       }
     ]
   },
@@ -48,11 +48,11 @@ const dialogs = {
     text: [
       {
         user_talking: true,
-        text: 'Moi aussi c’est bon j\'ai l\'acompte.'
+        text: 'J\'ai moi aussi l\'acompte, je veux prendre le large !'
       },
       {
         user_talking: false,
-        text: 'Je ne compte que deux pièces.'
+        text: 'Je ne compte que deux pièces d\'or.'
       },
       {
         user_talking: true,
@@ -95,19 +95,19 @@ const dialogs = {
     text: [
       {
         user_talking: false,
-        text: 'Le tram est bloqué, aide-moi à le réparer !'
+        text: 'Le tram est bloqué, aidez-moi à le réparer !'
       },
       {
         user_talking: true,
-        text: 'C\’est pas qu\'tu crois que j\'vais le faire, tout travail mérite salaire.'
+        text: 'Je peux te donner un coup de pince ! Seulement, tout travail mérite salaire.'
       },
       {
         user_talking: false,
-        text: 'Une pièce d’or ça te va ?'
+        text: 'Une pièce d\'or ça te va ?'
       },
       {
         user_talking: true,
-        text: 'Non deux !'
+        text: 'Je travaillerais seulement pour deux pièces !'
       },
       {
         user_talking: false,
@@ -124,7 +124,7 @@ const dialogs = {
     text: [
       {
         user_talking: false,
-        text: 'Un poisson contre une question !'
+        text: 'Un poisson contre une question :'
       },
       {
         user_talking: true,
@@ -132,7 +132,125 @@ const dialogs = {
       },
       {
         user_talking: false,
-        text: 'La mer a parfois sa couleur,<br/>Et sa cote accueille les promeneurs.<br/>Qu’elle orne le doigt ou le cou,<br/>Pour une femme elle est bijou.<br/><br/><b>Qui est-elle ?</b>'
+        text: 'La mer a parfois sa couleur,<br/>Et sa côte accueille les promeneurs.<br/>Qu\'elle orne le doigt ou le cou,<br/>Pour une femme elle est bijou.<br/><br/><b>Qui est-elle ?</b>'
+      }
+    ]
+  },
+  carosse: {
+    img: 'carosse.png',
+    text: [
+      {
+        user_talking: false,
+        text: 'Laissez passer, écartez-vous !!'
+      }
+    ]
+  },
+  chien: {
+    img: 'chien.png',
+    text: [
+      {
+        user_talking: false,
+        text: 'Rrrrrrr... OUAAF !'
+      },
+      {
+        user_talking: true,
+        text: 'Clap clap !'
+      }
+    ]
+  },
+  homme_corde: {
+    img: 'homme_corde.png',
+    text: [
+      {
+        user_talking: false,
+        text: 'TIREZ !!!!!'
+      }
+    ]
+  },
+  fouet_cheval: {
+    img: 'fouet_cheval.png',
+    text: [
+      {
+        user_talking: false,
+        text: 'Avance sale canasson !!'
+      },
+      {
+        user_talking: true,
+        text: 'Ce n\'est pas une façon de parler à un vieux crabe !'
+      },
+      {
+        user_talking: true,
+        text: 'Ah, vous parlez peut-être à votre cheval...'
+      }
+    ]
+  },
+  homme_porte_planche: {
+    img: 'homme_porte_planche.png',
+    text: [
+      {
+        user_talking: false,
+        text: 'Que c\'est épuisant, vivement ce soir !'
+      }
+    ]
+  },
+  chevaux: {
+    img: 'chevaux.png',
+    text: [
+      {
+        user_talking: false,
+        text: 'Que fait un vieux crabe ici ?'
+      },
+      {
+        user_talking: true,
+        text: '...'
+      }
+    ]
+  },
+  nageur: {
+    img: 'nageur.png',
+    text: [
+      {
+        user_talking: false,
+        text: 'Allez, plus que 100 mètres et j\'y suis.'
+      }
+    ]
+  },
+  homme_tonneau: {
+    img: 'homme_tonneau.png',
+    text: [
+      {
+        user_talking: false,
+        text: 'Je goûterai bien un peu de ce vin.'
+      }
+    ]
+  },
+  homme_riche: {
+    img: 'homme_riche.png',
+    text: [
+      {
+        user_talking: false,
+        text: 'Madame, est-il possible de vous demander votre main, vous êtes tellement gracieuse. Voulez-vous partir avec moi ?'
+      }
+    ]
+  },
+  femme_enfant: {
+    img: 'femme_enfant.png',
+    text: [
+      {
+        user_talking: false,
+        text: 'Bon voyage à tous, on se revoit sur le nouveau continent !'
+      },
+      {
+        user_talking: true,
+        text: 'Excusez moi madame, connaissez-vous un moyen d\'embarquer sans pièce d\'or ?'
+      },
+      {
+        user_talking: false,
+        text: 'C\'est impossible vieux crabe. Mais, les hommes seront être bienveillants à ton égard si tu leur donnes un coup de pince.'
+      },
+      {
+        user_talking: true,
+        text: 'Merci bien. Je vais voir ce que je peux faire.'
       }
     ]
   }
@@ -194,11 +312,22 @@ const showDialog = (dialog) => {
 }
 
 const hideDialog = () => {
-  $('#character').attr("src", "")
   $('.dialog_container').fadeOut()
   $('.container').removeClass('blur')
   showArrow() // Pour garder que celles qu'il faut
   showObjects() // Pour garder que celles qu'il faut
+
+  // Pour éviter les glitchs on enlève l'image du character après la disparition du container de dialog
+  setTimeout(() => {
+    $('#character').attr("src", "")
+  }, 500);
+
+  // On remet le crabe pour le chapitre 2
+  if(data_id == "dame_blanche_soldat") {
+    setTimeout(() => {
+      $('#user').attr("src", "assets/images/dialogs/crabe.png")
+    }, 1000);
+  }
 }
 
 // Fonction pour passer à la prochaine phrase dans le dialogue

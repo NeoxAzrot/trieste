@@ -47,7 +47,7 @@ const nextStep = (id) => {
     chapitreIndex++
     sceneIndex = 0
 
-    $('.interaction').hide()
+    $('.interaction.chapitre1').hide()
 
     moveToScene(chapitreIndex, sceneIndex)
   }

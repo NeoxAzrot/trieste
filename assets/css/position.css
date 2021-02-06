@@ -53,10 +53,10 @@
 }
 
 #dame_blanche {
-  top: 27%;
-  left: 60.5%;
-  width: 5%;
-  height: 22%;
+  top: 28%;
+  left: 61%;
+  width: 4%;
+  height: 18%;
 }
 
 #coffre_soldat {
@@ -64,4 +64,74 @@
   left: 69%;
   width: 2%;
   height: 4%;
+}
+
+#carosse {
+  top: 31.5%;
+  left: 4%;
+  width: 3.5%;
+  height: 5%;
+}
+
+#chien {
+  top: 33%;
+  left: 31.5%;
+  width: 1%;
+  height: 1%;
+}
+
+#homme_corde {
+  top: 31%;
+  left: 40.25%;
+  width: 1%;
+  height: 1.5%;
+}
+
+#fouet_cheval {
+  top: 32.5%;
+  left: 38.25%;
+  width: 2.75%;
+  height: 3.25%;
+}
+
+#homme_porte_planche {
+  top: 37.5%;
+  left: 32%;
+  width: 3%;
+  height: 5%;
+}
+
+#chevaux {
+  top: 30.5%;
+  left: 29.5%;
+  width: 1.75%;
+  height: 2.5%;
+}
+
+#nageur {
+  top: 39.5%;
+  left: 49.75%;
+  width: 1%;
+  height: 1.75%;
+}
+
+#homme_tonneau {
+  top: 31.75%;
+  left: 42%;
+  width: 0.5%;
+  height: 1.25%;
+}
+
+#homme_riche {
+  top: 29%;
+  left: 56%;
+  width: 4%;
+  height: 15%;
+}
+
+#femme_enfant {
+  top: 30%;
+  left: 73.25%;
+  width: 3.75%;
+  height: 15%;
 }
