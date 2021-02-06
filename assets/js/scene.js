@@ -55,7 +55,8 @@ const chapitres = [
           loop: true,
           volume: 1
         }),
-        video: 'tableau4.mp4'
+        video: 'tableau4.mp4',
+        dialog: 'tableau4'
       },
       {
         x: -700,
@@ -67,7 +68,8 @@ const chapitres = [
           loop: true,
           volume: 1
         }),
-        video: 'tableau5.mp4'
+        video: 'tableau5.mp4',
+        dialog: 'tableau5'
       },
       {
         x: -1400,
@@ -79,7 +81,8 @@ const chapitres = [
           loop: true,
           volume: 1
         }),
-        video: 'tableau6.mp4'
+        video: 'tableau6.mp4',
+        dialog: 'tableau6'
       },
       {
         x: -1800,
@@ -91,7 +94,8 @@ const chapitres = [
           loop: true,
           volume: 1
         }),
-        video: 'tableau7.mp4'
+        video: 'tableau7.mp4',
+        dialog: 'tableau7'
       },
       {
         x: -3000,
@@ -103,7 +107,8 @@ const chapitres = [
           loop: true,
           volume: 1
         }),
-        video: 'tableau8.mp4'
+        video: 'tableau8.mp4',
+        dialog: 'tableau8'
       },
       {
         x: -1920,
@@ -116,7 +121,8 @@ const chapitres = [
           loop: true,
           volume: 1
         }),
-        video: 'outro.mp4'
+        video: 'outro.mp4',
+        dialog: 'outro'
       }
     ]
   }
@@ -129,6 +135,7 @@ let sceneIndex
 const moveToScene = (chapitreIndex, sceneIndex) => {
   let scale = chapitres[chapitreIndex].scenes[sceneIndex].scale
   let sound = chapitres[chapitreIndex].scenes[sceneIndex].sound
+  let dialog = chapitres[chapitreIndex].scenes[sceneIndex].dialog
 
   let x = chapitres[chapitreIndex].scenes[sceneIndex].x 
   let y = chapitres[chapitreIndex].scenes[sceneIndex].y
@@ -154,6 +161,16 @@ const moveToScene = (chapitreIndex, sceneIndex) => {
 
   // On show et hide les interactions de la scène actuelle uniquement
   showInteraction()
+
+  if(dialog) {
+    setTimeout(() => {
+      data_id = dialog
+      showDialog(dialogs[data_id])
+    }, 2000)
+
+    // On enlève le dialogue pour ne pas le rejouer si on revient sur la scène
+    chapitres[chapitreIndex].scenes[sceneIndex].dialog = ''
+  }
 }
 
 // Fonctions pour les flèches

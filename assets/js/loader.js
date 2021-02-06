@@ -16,5 +16,6 @@ const startMenu = () => {
   $('.menu').show()
   playIntro = false
   playStart = true
-  //sound_menu.play() // A remettre si on remodifie la vidéo
+  // Désactivé pour ne pas relancer le son après l'intro
+  // sound_menu.play()
 }

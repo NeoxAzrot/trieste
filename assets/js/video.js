@@ -7,6 +7,10 @@ let playStart = false
 const playVideo = (url = chapitres[chapitreIndex].scenes[sceneIndex].video) => {
   if(playIntro) {
     $('.loader').addClass('hide')
+    // // Timeout pour être en accord avec la vidéo
+    // setTimeout(() => {
+    //   sound_menu.play() // Pour garder le même son au moment du lancement du menu
+    // }, 2200)
   }
 
   if(playStart) {
@@ -32,10 +36,6 @@ videoPlayer.addEventListener('ended', () => {
   if(!playIntro && !playStart) {
     nextVideoScene()
   }
-
-  if(playIntro) {
-    startMenu()
-  }
   
   if(playStart) {
     initScene()
@@ -43,6 +43,11 @@ videoPlayer.addEventListener('ended', () => {
     setTimeout(() => {
       $('#close_video').show()
     }, 800)
+  }
+
+  // A la fin pour ne pas prendre en compte le changement de variable directement
+  if(playIntro) {
+    startMenu()
   }
 })
 

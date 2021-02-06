@@ -37,7 +37,10 @@ const nextStep = (id) => {
     let img = 'soldat.png'
     data_id = 'dame_blanche_soldat'
     $('#user').attr("src", '')
-    $('#user').attr("src", "assets/images/dialogs/" + img)
+    // Pour éviter le glitch on met un timeout du même temps que du fadeOut de Jqueyr --> 500ms
+    setTimeout(() => {
+      $('#user').attr("src", "assets/images/dialogs/" + img)
+    }, 500);
 
     showDialog(dialogs[data_id])
     $('#dame_blanche').hide()

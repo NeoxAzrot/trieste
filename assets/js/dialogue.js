@@ -253,6 +253,96 @@ const dialogs = {
         text: 'Merci bien. Je vais voir ce que je peux faire.'
       }
     ]
+  },
+  tableau4: {
+    img: '',
+    text: [
+      {
+        user_talking: true,
+        text: 'Larguez les amarres !!!'
+      },
+      {
+        user_talking: true,
+        text: 'Quelle aubaine ! Je vais enfin pouvoir m\'affranchir de mon destin en retrouvant ma liberté, mais pour l\'instant je me dois d\'être discret pour ne pas finir dans l\'assiette des marins !'
+      }
+    ]
+  },
+  tableau5: {
+    img: '',
+    text: [
+      {
+        user_talking: true,
+        text: 'Satané soleil il me brûle les yeux, vivement que j\'me sorte de là et que je retrouve ma petite bicoque sous la mer.'
+      },
+      {
+        user_talking: true,
+        text: ' Par contre ça commence à me faire du mouron, j\'ai entendu quelques messes basses entre certains membres de l\'équipage et il semblerait qu\'une tempête se prépare...'
+      }
+    ]
+  },
+  tableau6: {
+    img: '',
+    text: [
+      {
+        user_talking: true,
+        text: 'C\'était inévitable, cette puissante bourrasque a surpris tout l\'équipage, quel bande de gougnafier.'
+      },
+      {
+        user_talking: true,
+        text: 'Le navire a subi de nombreux dégâts...'
+      },
+      {
+        user_talking: true,
+        text: 'Sapristi le mât est en feu, JE SUIS CERNÉ !!! Il faut vite que je me sorte de là !'
+      }
+    ]
+  },
+  tableau7: {
+    img: '',
+    text: [
+      {
+        user_talking: true,
+        text: 'Ouffff ! J\'ai réussi à me mettre à l\'abri dans une chaloupe à l\'arrière du vaisseau ! Ce coup de tabac est en train d\'éradiquer tout l\'équipage !!'
+      },
+      {
+        user_talking: true,
+        text: 'Le gouvernail et le mat se sont brisés ! Il faut vite que je sorte de cette galère !!'
+      },
+      {
+        user_talking: true,
+        text: 'Oh un satané goeland ! Il peut voler quel chance. Il faut que je trouve un échappatoire...'
+      }
+    ]
+  },
+  tableau8: {
+    img: '',
+    text: [
+      {
+        user_talking: true,
+        text: 'Arghhh... le déluge est terminé ? Mais... où suis-je ? Serait-ce ?? Du sable ??? Mais c\'est pas possible ?'
+      },
+      {
+        user_talking: true,
+        text: 'J\'ai dû perdre la boule en mer lorsque j\'ai essayé de m\'évader et j\'aurai donc fini sur la côte à cause du courant ?'
+      },
+      {
+        user_talking: true,
+        text: 'Diantre ! Il y a des pêcheurs partout, je me dois d\'être furtif...'
+      }
+    ]
+  },
+  outro: {
+    img: '',
+    text: [
+      {
+        user_talking: true,
+        text: 'Non ! Ne me pêchez pas ! Je ne suis pas comestible, je suis une vieille branche et ma coque est dure comme fer !'
+      },
+      {
+        user_talking: true,
+        text: 'Vous ne m\'aurez pas comme ça, croyez-le ou non, jeune faquin !!'
+      }
+    ]
   }
 }
 
@@ -295,7 +385,10 @@ let index_dialog = 0
 
 const showDialog = (dialog) => {
   if(index_dialog == 0) {
-    $('#character').attr("src", "assets/images/dialogs/" + dialog.img)
+    // On affiche l'image si il y en a une pour éviter les erreurs
+    if(dialog.img) {
+      $('#character').attr("src", "assets/images/dialogs/" + dialog.img)
+    }
     $('.dialog_container').fadeIn()
     $('.container').addClass('blur')
     $('.arrow').hide()
