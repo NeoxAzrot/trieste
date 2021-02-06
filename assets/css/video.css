@@ -34,30 +34,3 @@
 .crose:hover {
   transform: scale(1.1);
 }
-
-.start_video {
-  font-family: var(--main-font);
-  font-size: 26px;
-  padding: 10px 40px;
-  border: 2px solid var(--black);
-  border-radius: 8px;
-  transition: 0.4s ease;
-  cursor: pointer;
-  color: var(--white);
-  background: var(--black);
-  margin-top: 80px;
-  text-transform: uppercase;
-  text-align: center;
-  width: 300px;
-  position: absolute;
-  bottom: 10%;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 10;
-}
-
-.start_video:hover {
-  color: #f3f3f3;
-  background: #111111;
-  border-color: #111111;
-}

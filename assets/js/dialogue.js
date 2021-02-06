@@ -124,7 +124,7 @@ const dialogs = {
     text: [
       {
         user_talking: false,
-        text: 'Un poisson contre une question :'
+        text: 'Un poisson contre une question !'
       },
       {
         user_talking: true,
@@ -279,12 +279,14 @@ const checkDialogWithObject = (id) => {
     nb_fishs--
     nb_coins++
     $('#homme_qui_mange').hide()
+    $('#homme_qui_mange').addClass('done')
   }
 
   if(id == 'dame_blanche' && nb_coins >= 3) {
     data_id = 'dame_blanche_success'
     nb_coins -= 3
     $('#dame_blanche').hide()
+    $('#dame_blanche').addClass('done')
   }
 }
 
@@ -318,9 +320,12 @@ const hideDialog = () => {
   showObjects() // Pour garder que celles qu'il faut
 
   // Pour éviter les glitchs on enlève l'image du character après la disparition du container de dialog
-  setTimeout(() => {
-    $('#character').attr("src", "")
-  }, 500);
+  // Pas pour la dame blanche car sinon elle disparait en plein dialogue
+  if(data_id != 'dame_blanche_success') {
+    setTimeout(() => {
+      $('#character').attr("src", "")
+    }, 500);
+  }
 
   // On remet le crabe pour le chapitre 2
   if(data_id == "dame_blanche_soldat") {

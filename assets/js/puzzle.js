@@ -46,6 +46,7 @@ function checkPuzzlePieces () {
   if (completed) {
     $('.game_container').addClass('success')
     $('#tram').hide()
+    $('#tram').addClass('done')
 
     setTimeout(() => {
       $('.puzzle_container').removeClass('show')

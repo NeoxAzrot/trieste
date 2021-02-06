@@ -66,6 +66,7 @@ function checkWin(){
     })
     // Gagné
     $('#coffre_soldat').hide()
+    $('#coffre_soldat').addClass('done')
 
     setTimeout(() => {
       $('.code_container').removeClass('show')

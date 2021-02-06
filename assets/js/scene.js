@@ -49,6 +49,7 @@ const chapitres = [
         y: -800,
         scale: 1.6,
         arrowLeft: false,
+        arrowRight: false,
         sound: new Howl({
           src: ['assets/sounds/' + 'scene4.mp3'],
           loop: true,
@@ -60,48 +61,62 @@ const chapitres = [
         x: -700,
         y: -1550,
         scale: 1.4,
+        arrowRight: false,
         sound: new Howl({
           src: ['assets/sounds/' + 'scene5.mp3'],
           loop: true,
           volume: 1
         }),
-        video: ''
+        video: 'tableau5.mp4'
       },
       {
         x: -1400,
         y: -1280,
         scale: 1.9,
+        arrowRight: false,
         sound: new Howl({
           src: ['assets/sounds/' + 'scene6.mp3'],
           loop: true,
           volume: 1
         }),
-        video: ''
+        video: 'tableau6.mp4'
       },
       {
         x: -1800,
         y: -1700,
         scale: 1.3,
-        sound: '',
+        arrowRight: false,
+        sound: new Howl({
+          src: ['assets/sounds/' + 'scene7.mp3'],
+          loop: true,
+          volume: 1
+        }),
         video: 'tableau7.mp4'
       },
       {
         x: -3000,
         y: -1750,
         scale: 1.2,
-        sound: '',
+        arrowRight: false,
+        sound: new Howl({
+          src: ['assets/sounds/' + 'scene8.mp3'],
+          loop: true,
+          volume: 1
+        }),
         video: 'tableau8.mp4'
       },
       {
         x: -1920,
         y: -1080,
         scale: 0.5,
+        arrowLeft: false,
         arrowRight: false,
         sound: new Howl({
           src: ['assets/sounds/' + 'outro.mp3'],
           loop: true,
           volume: 1
-        })
+        }),
+        video: 'outro.mp4'
       }
     ]
   }
@@ -114,7 +129,6 @@ let sceneIndex
 const moveToScene = (chapitreIndex, sceneIndex) => {
   let scale = chapitres[chapitreIndex].scenes[sceneIndex].scale
   let sound = chapitres[chapitreIndex].scenes[sceneIndex].sound
-  let video = chapitres[chapitreIndex].scenes[sceneIndex].video
 
   let x = chapitres[chapitreIndex].scenes[sceneIndex].x 
   let y = chapitres[chapitreIndex].scenes[sceneIndex].y
@@ -136,14 +150,10 @@ const moveToScene = (chapitreIndex, sceneIndex) => {
   })
 
   showArrow()
-
-  if(video) {
-    $('.start_video').fadeIn()
-  } else{
-    $('.start_video').fadeOut()
-  }
-
   playSound(sound)
+
+  // On show et hide les interactions de la scène actuelle uniquement
+  showInteraction()
 }
 
 // Fonctions pour les flèches
@@ -192,7 +202,7 @@ const playSound = (sound) => {
   }
 }
 
-// Fonction pour jouer la musique d'ambiance sur chaque scène
+// Fonction pour arrêter la musique d'ambiance sur chaque scène
 const stopSound = () => {
   let = sound = chapitres[chapitreIndex].scenes[sceneIndex].sound
   if(sound) {
@@ -201,6 +211,17 @@ const stopSound = () => {
     setTimeout(() => {
       sound.pause()
     }, 2000);
+  }
+}
+
+// Fonction pour afficher les interactions de la scène uniquement
+const showInteraction = () => {
+  $('.interaction').hide() // On cache tout
+  $(`.interaction.scene${sceneIndex + 1}.chapitre${chapitreIndex + 1}`).show() // On affiche seulement ceux de la scène
+  $('.interaction.done').hide() // On cache celles déjà faites
+
+  if(!after_dame_done) {
+    $('.interaction.after_dame').hide() // On cache celle après la dame blanche si on ne l'a pas encore activé
   }
 }
 

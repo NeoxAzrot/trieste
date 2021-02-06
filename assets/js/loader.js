@@ -1,5 +1,5 @@
 const sound_menu = new Howl({
-  src: ['assets/sounds/' + 'outro.mp3'],
+  src: ['assets/sounds/' + 'intro.mp3'],
   loop: true,
   volume: 1
 })
@@ -14,6 +14,7 @@ jQuery(document).ready(function($) {
 
 const startMenu = () => {
   $('.menu').show()
-  $('.loader').addClass('hide')
-  sound_menu.play()
+  playIntro = false
+  playStart = true
+  //sound_menu.play() // A remettre si on remodifie la vidéo
 }

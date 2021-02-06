@@ -71,6 +71,21 @@
   border-color: var(--yellow);
 }
 
+.loader .audio {
+  margin-top: 10px;
+}
+
+.loader .audio i {
+  color: var(--yellow);
+  font-size: 22px;
+  margin-top: 20px;
+}
+
+.loader .audio p {
+  margin-top: 5px;
+  font-size: 18px;
+}
+
 /* Loader */
 .sk-cube-grid {
   width: 40px;

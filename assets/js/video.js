@@ -1,11 +1,15 @@
 const videoPlayer = document.querySelector('#video') // Car ne fonctionne pas en jquery
 const videoPlayerContainer = $('.video_container')
-const videoPlayerButton = $('.start_video')
 
 let playIntro = true
+let playStart = false
 
 const playVideo = (url = chapitres[chapitreIndex].scenes[sceneIndex].video) => {
   if(playIntro) {
+    $('.loader').addClass('hide')
+  }
+
+  if(playStart) {
     sound_menu.fade(1, 0, 1000)
     $('#close_video').hide()
 
@@ -14,38 +18,53 @@ const playVideo = (url = chapitres[chapitreIndex].scenes[sceneIndex].video) => {
       $('.menu').hide()
       $('.container').show()
     }, 1000)
-  } else {
-    stopSound()
   }
 
   videoPlayer.setAttribute('src', 'assets/videos/' + url)
   videoPlayerContainer.fadeIn()
-  videoPlayerButton.fadeOut()
   videoPlayer.play()
 }
 
 videoPlayer.addEventListener('ended', () => {
   videoPlayerContainer.fadeOut()
-  
+
+  // On le met avant pour ne pas l'exécuter directement après l'intro
+  if(!playIntro && !playStart) {
+    nextVideoScene()
+  }
+
   if(playIntro) {
+    startMenu()
+  }
+  
+  if(playStart) {
     initScene()
-    playIntro = false
+    playStart = false
     setTimeout(() => {
       $('#close_video').show()
-    }, 800);
-  } else {
-    playSound(chapitres[chapitreIndex].scenes[sceneIndex].sound)
-
-    // Pour ne pas afficher le bouton à la première scène
-    videoPlayerButton.fadeIn()
+    }, 800)
   }
 })
 
 $('#close_video').click(() => {
   videoPlayer.pause()
-
   videoPlayerContainer.fadeOut()
-  videoPlayerButton.fadeIn()
 
-  playSound(chapitres[chapitreIndex].scenes[sceneIndex].sound)
+  if(playIntro) {
+    startMenu()
+  }
+
+  if(!playIntro && !playStart) {
+    nextVideoScene()
+  }
 })
+
+// Fonction pour passer à la scène suivante dans le chapitre 2 avec les vidéos
+const nextVideoScene = () => {
+  // On met la flèche pour passer à l'histoire suivante
+  let actual_scene = chapitres[chapitreIndex].scenes[sceneIndex]
+  if(!actual_scene.arrowRight) {
+    actual_scene.arrowRight = true
+    showArrow()
+  }
+}

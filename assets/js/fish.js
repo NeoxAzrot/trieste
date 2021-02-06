@@ -16,6 +16,7 @@ $('#fish_answer').on('input', () => {
     $('#fish_answer').prop('disabled', true)
     $('.right_answer').fadeIn()
     $('#homme_poisson').hide()
+    $('#homme_poisson').addClass('done')
 
     setTimeout(() => {
       $('.fish_question_container').removeClass('show')

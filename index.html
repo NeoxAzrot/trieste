@@ -40,7 +40,11 @@
           <div class="sk-cube sk-cube8"></div>
           <div class="sk-cube sk-cube9"></div>
         </div>
-        <div class="start" onclick="startMenu()">Lancer</div>
+        <div class="start" onclick="playVideo('intro.mp4')">Lancer</div>
+        <div class="audio">
+          <i class="fas fa-headphones-alt"></i>
+          <p>Cette expérience contient une <b>ambiance musicale</b>, veuillez activer le son.</p>
+        </div>
       </div>
     </section>
 
@@ -50,16 +54,11 @@
         <h1>Trieste</h1>
         <p>Une histoire interactive <b>point and click</b> en ligne qui vous propose une expérience culturelle et artistique autour d’un univers sombre et immersif dans les fonds marins.</p>
         <p>Trouver <b>des indices</b> dans les tableaux pour aider <i>César</i>, un vieux crabe issu d’une nature morte, à retrouver son habitat naturel.</p>
-        <div class="start" onclick="playVideo('intro.mp4')">Commencer</div>
-        <div class="audio">
-          <i class="fas fa-headphones-alt"></i>
-          <p>Cette expérience contient une <b>ambiance musicale</b>, veuillez activer le son.</p>
-        </div>
+        <div class="start" onclick="playVideo('start_play.mp4')">Commencer</div>
       </div>
     </section>
 
     <!-- Les vidéos -->
-    <div class="start_video" onclick="playVideo()" style="display: none;">Voir la vidéo</div>
     <section class="video_container">
       <img class="crose" id="close_video" src="assets/images/light_croix.png" alt="Croix pour fermer la vidéo">
       <div class="video_container_player">
@@ -84,22 +83,28 @@
           <div class="fresque_container">
             <img src="assets/images/fresque.jpg" class="fresque">
           </div>
-          <div id="homme_parapluie" data-dialog-id="parapluie" class="interaction chapitre1"></div>
-          <div id="homme_qui_mange" data-dialog-id="homme_qui_mange" class="interaction after_dame chapitre1"></div>
-          <div id="homme_poisson" data-dialog-id="homme_poisson" class="interaction after_dame chapitre1"></div>
-          <div id="tram" data-dialog-id="tram" class="interaction after_dame chapitre1"></div>
-          <div id="dame_blanche" data-dialog-id="dame_blanche" class="interaction chapitre1"></div>
-          <div id="coffre_soldat" class="interaction after_dame chapitre1"></div>
-          <div id="carosse" data-dialog-id="carosse" class="interaction chapitre1"></div>
-          <div id="chien" data-dialog-id="chien" class="interaction chapitre1"></div>
-          <div id="homme_corde" data-dialog-id="homme_corde" class="interaction chapitre1"></div>
-          <div id="fouet_cheval" data-dialog-id="fouet_cheval" class="interaction chapitre1"></div>
-          <div id="homme_porte_planche" data-dialog-id="homme_porte_planche" class="interaction after_dame chapitre1"></div>
-          <div id="chevaux" data-dialog-id="chevaux" class="interaction after_dame chapitre1"></div>
-          <div id="nageur" data-dialog-id="nageur" class="interaction chapitre1"></div>
-          <div id="homme_tonneau" data-dialog-id="homme_tonneau" class="interaction chapitre1"></div>
-          <div id="homme_riche" data-dialog-id="homme_riche" class="interaction after_dame chapitre1"></div>
-          <div id="femme_enfant" data-dialog-id="femme_enfant" class="interaction after_dame chapitre1"></div>
+          <div id="homme_parapluie" data-dialog-id="parapluie" class="interaction scene1 chapitre1"></div>
+          <div id="homme_qui_mange" data-dialog-id="homme_qui_mange" class="interaction scene1 after_dame chapitre1"></div>
+          <div id="homme_poisson" data-dialog-id="homme_poisson" class="interaction scene2 after_dame chapitre1"></div>
+          <div id="tram" data-dialog-id="tram" class="interaction scene1 after_dame chapitre1"></div>
+          <div id="dame_blanche" data-dialog-id="dame_blanche" class="interaction scene3 chapitre1"></div>
+          <div id="coffre_soldat" class="interaction scene3 after_dame chapitre1"></div>
+          <div id="carosse" data-dialog-id="carosse" class="interaction scene1 chapitre1"></div>
+          <div id="chien" data-dialog-id="chien" class="interaction scene2 chapitre1"></div>
+          <div id="homme_corde" data-dialog-id="homme_corde" class="interaction scene2 chapitre1"></div>
+          <div id="fouet_cheval" data-dialog-id="fouet_cheval" class="interaction scene2 chapitre1"></div>
+          <div id="homme_porte_planche" data-dialog-id="homme_porte_planche" class="interaction scene2 after_dame chapitre1"></div>
+          <div id="chevaux" data-dialog-id="chevaux" class="interaction scene2 after_dame chapitre1"></div>
+          <div id="nageur" data-dialog-id="nageur" class="interaction scene2 chapitre1"></div>
+          <div id="homme_tonneau" data-dialog-id="homme_tonneau" class="interaction scene2 chapitre1"></div>
+          <div id="homme_riche" data-dialog-id="homme_riche" class="interaction scene3 after_dame chapitre1"></div>
+          <div id="femme_enfant" data-dialog-id="femme_enfant" class="interaction scene3 after_dame chapitre1"></div>
+          
+          <div id="tableau4" onclick="playVideo()" class="interaction scene1 chapitre2"></div>
+          <div id="tableau5" onclick="playVideo()" class="interaction scene2 chapitre2"></div>
+          <div id="tableau6" onclick="playVideo()" class="interaction scene3 chapitre2"></div>
+          <div id="tableau7" onclick="playVideo()" class="interaction scene4 chapitre2"></div>
+          <div id="tableau8" onclick="playVideo()" class="interaction scene5 chapitre2"></div>
         </div>
       </div>
     </section>

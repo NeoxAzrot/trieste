@@ -36,10 +36,12 @@ const nextStep = (id) => {
   if(id == "dame_blanche_success") {
     let img = 'soldat.png'
     data_id = 'dame_blanche_soldat'
+    $('#user').attr("src", '')
     $('#user').attr("src", "assets/images/dialogs/" + img)
 
     showDialog(dialogs[data_id])
     $('#dame_blanche').hide()
+    $('#dame_blanche').addClass('done')
   }
 
   // On passe à l'autre chapitre
