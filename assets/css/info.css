@@ -4,9 +4,9 @@
   display: none;
 }
 
-/* Pour toujours resté au dessus des minis jeux */
+/* Pour toujours resté au dessus des minis jeux mais en dessous des vidéos */
 .info_container > *, .info_container .info_text_container > * {
-  z-index: 99999;
+  z-index: 10000;
 }
 
 .info_container .info_icon {

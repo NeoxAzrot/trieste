@@ -51,12 +51,20 @@ const nextStep = (id) => {
 
   // On passe à l'autre chapitre
   if(id == "dame_blanche_soldat") {
-    chapitreIndex++
-    sceneIndex = 0
+    stopSound() // Car on ne clique pas sur une flèche
 
     $('.interaction.chapitre1').hide()
 
+    chapitreIndex++
+    sceneIndex = 0
     moveToScene(chapitreIndex, sceneIndex)
+  }
+
+  // Pour l'outro
+  if(id == "outro") {
+    $('.info_container').hide()
+    playOutro = true
+    playVideo()
   }
 }
 

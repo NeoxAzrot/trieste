@@ -428,6 +428,13 @@ const hideDialog = () => {
       $('#user').attr("src", "assets/images/dialogs/crabe.png")
     }, 1000);
   }
+
+  // On met la flèche pour passer à l'histoire précédente dans le chapitre 2
+  let actual_scene = chapitres[chapitreIndex].scenes[sceneIndex]
+  if(!actual_scene.arrowLeft && chapitres[chapitreIndex].scenes[sceneIndex + 1] != undefined && sceneIndex != 0) {
+    actual_scene.arrowLeft = true
+    showArrow()
+  }
 }
 
 // Fonction pour passer à la prochaine phrase dans le dialogue

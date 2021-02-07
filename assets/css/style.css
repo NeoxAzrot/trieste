@@ -257,3 +257,37 @@ body {
 .object_container img:first-child {
   margin-left: 0;
 }
+
+.end_container {
+  display: none;
+}
+
+.end_buttons_container {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.end_buttons_container .start_again {
+  font-family: var(--main-font);
+  font-size: 36px;
+  padding: 10px 40px;
+  border: 2px solid var(--yellow);
+  border-radius: 8px;
+  transition: 0.4s ease;
+  cursor: pointer;
+  color: var(--black);
+  margin-top: 80px;
+  text-transform: uppercase;
+  background: var(--yellow);
+  user-select: none;
+}
+
+.end_buttons_container .start_again:hover {
+  background: #e2940c;
+  border-color: #e2940c;
+}

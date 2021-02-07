@@ -62,6 +62,7 @@ const chapitres = [
         x: -700,
         y: -1550,
         scale: 1.4,
+        arrowLeft: false,
         arrowRight: false,
         sound: new Howl({
           src: ['assets/sounds/' + 'scene5.mp3'],
@@ -75,6 +76,7 @@ const chapitres = [
         x: -1400,
         y: -1280,
         scale: 1.9,
+        arrowLeft: false,
         arrowRight: false,
         sound: new Howl({
           src: ['assets/sounds/' + 'scene6.mp3'],
@@ -88,6 +90,7 @@ const chapitres = [
         x: -1800,
         y: -1700,
         scale: 1.3,
+        arrowLeft: false,
         arrowRight: false,
         sound: new Howl({
           src: ['assets/sounds/' + 'scene7.mp3'],
@@ -101,6 +104,7 @@ const chapitres = [
         x: -3000,
         y: -1750,
         scale: 1.2,
+        arrowLeft: false,
         arrowRight: false,
         sound: new Howl({
           src: ['assets/sounds/' + 'scene8.mp3'],
@@ -254,7 +258,19 @@ const initScene = () => {
   $('.menu').fadeOut()
   $('.container').fadeIn()
 
-  sceneIndex = 0
-  chapitreIndex = 0
+  sceneIndex = 0 // 0
+  chapitreIndex = 0 // 0
   moveToScene(chapitreIndex, sceneIndex)
+}
+
+// Fonction pour relancer le jeu, on réinitialise les variables
+const restart = () => {
+  playStart = true
+  playOutro = false
+
+  stopSound()
+
+  $('.done').removeClass('done')
+
+  playVideo('start_play.mp4')
 }

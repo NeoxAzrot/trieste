@@ -3,6 +3,7 @@ const videoPlayerContainer = $('.video_container')
 
 let playIntro = true
 let playStart = false
+let playOutro = false
 
 const playVideo = (url = chapitres[chapitreIndex].scenes[sceneIndex].video) => {
   if(playIntro) {
@@ -22,6 +23,10 @@ const playVideo = (url = chapitres[chapitreIndex].scenes[sceneIndex].video) => {
       $('.menu').hide()
       $('.container').show()
     }, 1000)
+  }
+
+  if(playOutro) {
+    $('#close_video').hide()
   }
 
   videoPlayer.setAttribute('src', 'assets/videos/' + url)
@@ -49,6 +54,10 @@ videoPlayer.addEventListener('ended', () => {
   if(playIntro) {
     startMenu()
   }
+
+  if(playOutro) {
+    $('.end_container').fadeIn()
+  }
 })
 
 $('#close_video').click(() => {
@@ -68,7 +77,7 @@ $('#close_video').click(() => {
 const nextVideoScene = () => {
   // On met la flèche pour passer à l'histoire suivante
   let actual_scene = chapitres[chapitreIndex].scenes[sceneIndex]
-  if(!actual_scene.arrowRight) {
+  if(!actual_scene.arrowRight && chapitres[chapitreIndex].scenes[sceneIndex + 1] != undefined) {
     actual_scene.arrowRight = true
     showArrow()
   }
