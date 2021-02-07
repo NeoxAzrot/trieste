@@ -5,11 +5,15 @@ const sound_puzzle = new Howl({
   volume: 1
 })
 
-puzzles.each(function () {
-  const rotation = 90 * Math.round(Math.random() * 3)
-  this.setAttribute('data-rotation', rotation)
-  this.style.transform = 'rotate(' + rotation + 'deg)'
-})
+const randomPuzzle = () => {
+  puzzles.each(function () {
+    const rotation = 90 * Math.round(Math.random() * 3)
+    this.setAttribute('data-rotation', rotation)
+    this.style.transform = 'rotate(' + rotation + 'deg)'
+  })
+}
+
+randomPuzzle()
 
 puzzles.on('click', function () {
   if(!completed) {

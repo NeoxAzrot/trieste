@@ -18,7 +18,7 @@ const dialogs = {
     text: [
       {
         user_talking: false,
-        text: 'Embarquement, embarquement, 3 pièces d\'or seulement, départ dans 15 min.'
+        text: 'Embarquement, embarquement, 3 pièces d\'or seulement, départ dans 15 minutes.'
       },
       {
         user_talking: true,
@@ -26,7 +26,7 @@ const dialogs = {
       },
       {
         user_talking: false,
-        text: 'Non pas de fesse-mathieu ici !'
+        text: 'Non, pas de fesse-mathieu ici !'
       }
     ]
   },
@@ -48,7 +48,7 @@ const dialogs = {
     text: [
       {
         user_talking: true,
-        text: 'J\'ai moi aussi l\'acompte, je veux prendre le large !'
+        text: 'J\'ai moi aussi l\'acompte, je veux prendre le large.'
       },
       {
         user_talking: false,
@@ -107,15 +107,7 @@ const dialogs = {
       },
       {
         user_talking: true,
-        text: 'Je travaillerais seulement pour deux pièces !'
-      },
-      {
-        user_talking: false,
-        text: 'Sûrement pas, une ou rien !'
-      },
-      {
-        user_talking: true,
-        text: 'Bon fais-moi voir ça.'
+        text: 'Très bien ! Fais-moi voir ça.'
       }
     ]
   },
@@ -180,7 +172,7 @@ const dialogs = {
       },
       {
         user_talking: true,
-        text: 'Ah, vous parlez peut-être à votre cheval...'
+        text: 'Ah, vous parlez peut-être de votre cheval...'
       }
     ]
   },
@@ -189,7 +181,7 @@ const dialogs = {
     text: [
       {
         user_talking: false,
-        text: 'Que c\'est épuisant, vivement ce soir !'
+        text: 'Que c\'est épuisant, vivement ce soir.'
       }
     ]
   },
@@ -242,11 +234,11 @@ const dialogs = {
       },
       {
         user_talking: true,
-        text: 'Excusez moi madame, connaissez-vous un moyen d\'embarquer sans pièce d\'or ?'
+        text: 'Excusez-moi madame, connaissez-vous un moyen d\'embarquer sans pièce d\'or ?'
       },
       {
         user_talking: false,
-        text: 'C\'est impossible vieux crabe. Mais, les hommes seront être bienveillants à ton égard si tu leur donnes un coup de pince.'
+        text: 'C\'est impossible vieux crabe. Mais, les hommes seront bienveillants à ton égard si tu leur donnes un coup de pince.'
       },
       {
         user_talking: true,
@@ -263,7 +255,7 @@ const dialogs = {
       },
       {
         user_talking: true,
-        text: 'Quelle aubaine ! Je vais enfin pouvoir m\'affranchir de mon destin en retrouvant ma liberté, mais pour l\'instant je me dois d\'être discret pour ne pas finir dans l\'assiette des marins !'
+        text: 'Quelle aubaine ! Je vais enfin pouvoir m\'affranchir de mon destin en retrouvant ma liberté, mais pour l\'instant je me dois d\'être discret pour ne pas finir dans l\'assiette des marins.'
       }
     ]
   },
@@ -276,7 +268,7 @@ const dialogs = {
       },
       {
         user_talking: true,
-        text: ' Par contre ça commence à me faire du mouron, j\'ai entendu quelques messes basses entre certains membres de l\'équipage et il semblerait qu\'une tempête se prépare...'
+        text: 'Par contre, ça commence à me faire du mouron, j\'ai entendu quelques messes basses entre certains membres de l\'équipage et il semblerait qu\'une tempête se prépare...'
       }
     ]
   },
@@ -302,15 +294,15 @@ const dialogs = {
     text: [
       {
         user_talking: true,
-        text: 'Ouffff ! J\'ai réussi à me mettre à l\'abri dans une chaloupe à l\'arrière du vaisseau ! Ce coup de tabac est en train d\'éradiquer tout l\'équipage !!'
+        text: 'Oufff ! J\'ai réussi à me mettre à l\'abri dans une chaloupe à l\'arrière du vaisseau. Ce coup de tabac est en train d\'éradiquer tout l\'équipage !'
       },
       {
         user_talking: true,
-        text: 'Le gouvernail et le mat se sont brisés ! Il faut vite que je sorte de cette galère !!'
+        text: 'Le gouvernail et le mat se sont brisés. Il faut vite que je sorte de cette galère !!'
       },
       {
         user_talking: true,
-        text: 'Oh un satané goeland ! Il peut voler quel chance. Il faut que je trouve un échappatoire...'
+        text: 'Oh, un satané goeland ! Il peut voler quelle chance. Il faut que je trouve un échappatoire...'
       }
     ]
   },
@@ -319,11 +311,11 @@ const dialogs = {
     text: [
       {
         user_talking: true,
-        text: 'Arghhh... le déluge est terminé ? Mais... où suis-je ? Serait-ce ?? Du sable ??? Mais c\'est pas possible ?'
+        text: 'Arghhh... le déluge est terminé ? Mais... où suis-je ? Serait-ce ?? Du sable ??? Mais ce n\'est pas possible ?'
       },
       {
         user_talking: true,
-        text: 'J\'ai dû perdre la boule en mer lorsque j\'ai essayé de m\'évader et j\'aurai donc fini sur la côte à cause du courant ?'
+        text: 'J\'ai dû perdre la boule en mer lorsque j\'ai essayé de m\'évader... J\'aurai donc fini sur la côte à cause du courant ?'
       },
       {
         user_talking: true,
@@ -340,7 +332,11 @@ const dialogs = {
       },
       {
         user_talking: true,
-        text: 'Vous ne m\'aurez pas comme ça, croyez-le ou non, jeune faquin !!'
+        text: 'Vous ne m\'aurez pas comme ça, croyez-le ou non !'
+      },
+      {
+        user_talking: true,
+        text: 'Jeune faquin !!'
       }
     ]
   }

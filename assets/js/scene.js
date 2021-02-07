@@ -265,12 +265,32 @@ const initScene = () => {
 
 // Fonction pour relancer le jeu, on réinitialise les variables
 const restart = () => {
+  let arrayDialog = ['tableau4', 'tableau5', 'tableau6', 'tableau7', 'tableau8', 'outro']
   playStart = true
   playOutro = false
+  after_dame_done = false
+  nb_fishs = 0
+  nb_coins = 0
+  completed = false
 
-  stopSound()
+  // On recache les flèches pour le chapitre 2
+  for(let i = 0; i < chapitres[1].scenes.length; i++) {
+    chapitres[1].scenes[i].arrowLeft = false
+    chapitres[1].scenes[i].arrowRight = false
+
+    chapitres[1].scenes[i].dialog = arrayDialog[i] // On réinitialise les dialogues
+  }
 
   $('.done').removeClass('done')
+  $('.game_container').removeClass('success')
+  $('#fish_answer').val('')
+  $('.right_answer').hide()
+  $('#fish_answer').prop('disabled', false)
 
+  randomPuzzle()
+  
+  stopSound()
   playVideo('start_play.mp4')
+
+  $('.end_container').fadeOut()
 }

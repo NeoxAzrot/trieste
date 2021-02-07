@@ -20,6 +20,18 @@
   }
 }
 
+@keyframes indice_strong {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 .interaction.after_dame {
   display: none;
 }
@@ -169,4 +181,5 @@
   left: 67%;
   width: 8%;
   height: 8%;
+  animation: indice_strong 3s infinite;
 }
