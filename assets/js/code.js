@@ -67,9 +67,12 @@ function checkWin(){
     // Gagné
     $('#coffre_soldat').hide()
     $('#coffre_soldat').addClass('done')
+    tool_clickable = false
 
     setTimeout(() => {
       $('.code_container').removeClass('show')
+      changeInfoText()
+      tool_clickable = true
   
       nb_coins++
       showObjects()
@@ -88,4 +91,5 @@ function checkWin(){
 // Fermer le puzzle au clique sur la croix
 $('#close_code').click(() => {
   $('.code_container').removeClass('show')
+  changeInfoText()
 })

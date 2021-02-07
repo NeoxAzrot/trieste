@@ -219,6 +219,7 @@ body {
   margin-top: 80px;
   text-transform: uppercase;
   background: none;
+  user-select: none;
 }
 
 .menu .start:hover {

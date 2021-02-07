@@ -22,7 +22,7 @@ const dialogs = {
       },
       {
         user_talking: true,
-        text: 'Je n\'ai pas un sou, il ny\' a pas d\'autres solutions que des pièces d\'or ?'
+        text: 'Je n\'ai pas un sou, il n\'y a pas d\'autres solutions que des pièces d\'or ?'
       },
       {
         user_talking: false,
@@ -392,6 +392,7 @@ const showDialog = (dialog) => {
     $('.dialog_container').fadeIn()
     $('.container').addClass('blur')
     $('.arrow').hide()
+    $('.info_container').hide()
   }
 
   if(dialog.text[index_dialog].user_talking) {
@@ -411,6 +412,7 @@ const hideDialog = () => {
   $('.container').removeClass('blur')
   showArrow() // Pour garder que celles qu'il faut
   showObjects() // Pour garder que celles qu'il faut
+  $('.info_container').fadeIn()
 
   // Pour éviter les glitchs on enlève l'image du character après la disparition du container de dialog
   // Pas pour la dame blanche car sinon elle disparait en plein dialogue

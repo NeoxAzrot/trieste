@@ -1,0 +1,44 @@
+/* Les flèches */
+.info_container {
+  z-index: 10;
+  display: none;
+}
+
+/* Pour toujours resté au dessus des minis jeux */
+.info_container > *, .info_container .info_text_container > * {
+  z-index: 99999;
+}
+
+.info_container .info_icon {
+  width: 30px;
+  height: auto;
+  user-select: none;
+  cursor: pointer;
+  transition: transform 0.4s ease;
+  -webkit-filter: drop-shadow(0 0 10px var(--black));
+          filter: drop-shadow(0 0 10px var(--black));
+  transform-origin: 50% 50%;
+  position: absolute;
+  top: 60px;
+  right: 60px;
+}
+
+.info_container .info_icon:hover {
+  transform: scale(1.1);
+}
+
+.info_container .info_text_container {
+  display: none;
+}
+
+.info_container .info_text {
+  position: absolute;
+  top: 100px;
+  right: 60px;
+  max-width: 30%;
+  text-align: right;
+  color: var(--white);
+  font-size: 18px;
+  font-family: var(--main-font);
+  text-shadow: var(--black) 0 1px 5px;
+}

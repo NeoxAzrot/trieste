@@ -17,9 +17,12 @@ $('#fish_answer').on('input', () => {
     $('.right_answer').fadeIn()
     $('#homme_poisson').hide()
     $('#homme_poisson').addClass('done')
+    tool_clickable = false
 
     setTimeout(() => {
       $('.fish_question_container').removeClass('show')
+      changeInfoText()
+      tool_clickable = true
   
       nb_fishs++
       showObjects()
@@ -29,4 +32,5 @@ $('#fish_answer').on('input', () => {
 
 $('#close_fish').click(() => {
   $('.fish_question_container').removeClass('show')
+  changeInfoText()
 })

@@ -63,6 +63,7 @@
   text-transform: uppercase;
   display: none;
   background: none;
+  user-select: none;
 }
 
 .loader_container .start:hover {

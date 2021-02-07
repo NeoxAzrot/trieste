@@ -157,6 +157,8 @@ const moveToScene = (chapitreIndex, sceneIndex) => {
   })
 
   showArrow()
+  showInfo()
+  changeInfoText() // Met le texte de base pour l'info bulle
   playSound(sound)
 
   // On show et hide les interactions de la scène actuelle uniquement
@@ -240,6 +242,11 @@ const showInteraction = () => {
   if(!after_dame_done) {
     $('.interaction.after_dame').hide() // On cache celle après la dame blanche si on ne l'a pas encore activé
   }
+}
+
+// Fonction pour afficher l'aide en haut
+const showInfo = () => {
+  $('.info_container').fadeIn()
 }
 
 // Fonction d'initialisation

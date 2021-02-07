@@ -15,6 +15,7 @@ const nextStep = (id) => {
   // Pour l'homme poisson
   if(id == "homme_poisson") {
     $('.fish_question_container').addClass('show')
+    changeInfoText('Du latin <b>smaragdus</b>, c\'est une pierre précieuse.')
 
     const app = document.getElementById('question')
     const typewriter = new Typewriter(app, {
@@ -30,6 +31,7 @@ const nextStep = (id) => {
   // Pour le tram
   if(id == "tram") {
     $('.puzzle_container').addClass('show')
+    changeInfoText('Cliquez sur <b>une pièce du puzzle</b> pour essayer de reconstruire le moteur.')
   }
 
   // On fait le 2ème dialogue
@@ -61,6 +63,7 @@ const nextStep = (id) => {
 // Pour le coffre du soldat car il n'y a pas de dialogue
 $('#coffre_soldat').click(() => {
   $('.code_container').addClass('show')
+  changeInfoText('Observez bien les tableaux... Un <b>indice</b> pourrait s\'y être <b>dissimulé</b>.')
 })
 
 // Fonction pour afficher les objets

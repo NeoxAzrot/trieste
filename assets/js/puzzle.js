@@ -47,9 +47,12 @@ function checkPuzzlePieces () {
     $('.game_container').addClass('success')
     $('#tram').hide()
     $('#tram').addClass('done')
+    tool_clickable = false
 
     setTimeout(() => {
       $('.puzzle_container').removeClass('show')
+      changeInfoText()
+      tool_clickable = true
   
       nb_coins++
       showObjects()
@@ -60,4 +63,5 @@ function checkPuzzlePieces () {
 // Fermer le puzzle au clique sur la croix
 $('#close_puzzle').click(() => {
   $('.puzzle_container').removeClass('show')
+  changeInfoText()
 })
