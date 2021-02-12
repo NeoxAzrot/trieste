@@ -212,7 +212,7 @@ const dialogs = {
     text: [
       {
         user_talking: false,
-        text: 'Je goûterai bien un peu de ce vin.'
+        text: 'Je goûterais bien un peu de ce vin.'
       }
     ]
   },
@@ -277,7 +277,7 @@ const dialogs = {
     text: [
       {
         user_talking: true,
-        text: 'C\'était inévitable, cette puissante bourrasque a surpris tout l\'équipage, quel bande de gougnafier.'
+        text: 'C\'était inévitable, cette puissante bourrasque a surpris tout l\'équipage, quelle bande de gougnafiers.'
       },
       {
         user_talking: true,
@@ -302,7 +302,7 @@ const dialogs = {
       },
       {
         user_talking: true,
-        text: 'Oh, un satané goeland ! Il peut voler quelle chance. Il faut que je trouve un échappatoire...'
+        text: 'Oh, un satané goéland ! Il peut voler quelle chance. Il faut que je trouve une échappatoire...'
       }
     ]
   },
@@ -315,7 +315,7 @@ const dialogs = {
       },
       {
         user_talking: true,
-        text: 'J\'ai dû perdre la boule en mer lorsque j\'ai essayé de m\'évader... J\'aurai donc fini sur la côte à cause du courant ?'
+        text: 'J\'ai dû perdre la boule en mer lorsque j\'ai essayé de m\'évader... J\'aurais donc fini sur la côte à cause du courant ?'
       },
       {
         user_talking: true,
