@@ -18,7 +18,7 @@ const dialogs = {
     text: [
       {
         user_talking: false,
-        text: 'Embarquement, embarquement, 3 pièces d\'or seulement, départ dans 15 minutes.'
+        text: 'Au revoir tout le monde, au revoir !! Je quitte à mon plus grand regret Bordeaux pour l’Angleterre. Mais joins toi à moi petit crabe, l’embarquement coûte trois pièces d’or !'
       },
       {
         user_talking: true,
@@ -26,7 +26,7 @@ const dialogs = {
       },
       {
         user_talking: false,
-        text: 'Non, pas de fesse-mathieu ici !'
+        text: 'Non, désolée, je ne peux pas t’avancer et seul l’or a une valeur dans ce monde.'
       }
     ]
   },
@@ -230,7 +230,7 @@ const dialogs = {
     text: [
       {
         user_talking: false,
-        text: 'Bon voyage à tous, on se revoit sur le nouveau continent !'
+        text: 'Bon voyage madame ! Faites attention à vous durant cette longue traversée !'
       },
       {
         user_talking: true,
@@ -268,7 +268,7 @@ const dialogs = {
       },
       {
         user_talking: true,
-        text: 'Par contre, ça commence à me faire du mouron, j\'ai entendu quelques messes basses entre certains membres de l\'équipage et il semblerait qu\'une tempête se prépare...'
+        text: 'Par contre, je commence à me faire du mouron. J\'ai entendu quelques messes basses entre des membres de l\'équipage. Il semblerait qu\'une tempête se prépare.'
       }
     ]
   },
@@ -277,7 +277,7 @@ const dialogs = {
     text: [
       {
         user_talking: true,
-        text: 'C\'était inévitable, cette puissante bourrasque a surpris tout l\'équipage, quelle bande de gougnafiers.'
+        text: 'C\'était inévitable, cette mutinerie a surpris tout l\'équipage. Quelle bande de gougnafiers !'
       },
       {
         user_talking: true,
@@ -294,7 +294,7 @@ const dialogs = {
     text: [
       {
         user_talking: true,
-        text: 'Oufff ! J\'ai réussi à me mettre à l\'abri dans une chaloupe à l\'arrière du vaisseau. Ce coup de tabac est en train d\'éradiquer tout l\'équipage !'
+        text: 'Oufff ! J\'ai réussi à me mettre à l\'abri dans une chaloupe à l\'arrière du bateau. Ce coup de tabac est en train d\'éradiquer tout l\'équipage !'
       },
       {
         user_talking: true,
@@ -328,7 +328,7 @@ const dialogs = {
     text: [
       {
         user_talking: true,
-        text: 'Non ! Ne me pêchez pas ! Je ne suis pas comestible, je suis une vieille branche et ma coque est dure comme fer !'
+        text: 'Non ! Ne me pêchez pas ! Je ne suis pas comestible, je suis une vieille branche et ma carapace est dure comme pierre !'
       },
       {
         user_talking: true,

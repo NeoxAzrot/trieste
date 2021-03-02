@@ -3,7 +3,7 @@ const app = document.getElementById('app')
 
 const typeAnimation = (text) => {
   const typewriter = new Typewriter(app, {
-    delay: 60
+    delay: 45
   })
 
   typewriter
