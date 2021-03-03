@@ -18,7 +18,7 @@ const dialogs = {
     text: [
       {
         user_talking: false,
-        text: 'Au revoir tout le monde, au revoir !! Je quitte à mon plus grand regret Bordeaux pour l’Angleterre. Mais joins toi à moi petit crabe, l’embarquement coûte trois pièces d’or !'
+        text: 'Au revoir tout le monde, au revoir !! Je quitte à mon plus grand regret Bordeaux pour l’Angleterre. Mais joins-toi à moi petit crabe, l’embarquement coûte trois pièces d’or !'
       },
       {
         user_talking: true,
