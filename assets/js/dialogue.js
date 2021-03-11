@@ -268,7 +268,7 @@ const dialogs = {
       },
       {
         user_talking: true,
-        text: 'Par contre, je commence à me faire du mouron. J\'ai entendu quelques messes basses entre des membres de l\'équipage. Il semblerait qu\'une tempête se prépare.'
+        text: 'Par contre, ça commence à me faire du mouron, j\'ai entendu quelques messes basses entre certains membres de l\'équipage et il semblerait qu\'une mutinerie se prépare...'
       }
     ]
   },
