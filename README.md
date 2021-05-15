@@ -15,3 +15,7 @@ After a violent and mysterious storm, the works of art of the Bordeaux Museum of
 - [trieste.netlify.app](https://trieste.netlify.app)
 - [musba-bordeaux.fr/fr/article/trieste-0](http://www.musba-bordeaux.fr/fr/article/trieste-0)
 - [bacchaweek.mmibordeaux.com/experiences/trieste.html](https://bacchaweek.mmibordeaux.com/experiences/trieste.html)
+
+---
+
+[Sami Lafrance](https://www.samilafrance.com/)
