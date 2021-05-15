@@ -3,7 +3,8 @@
 ## Explanation of the project
 
 The goal of this project was to create an immersive experience for Baccha Week at the Bordeaux Museum of Fine Arts.
-To do so, we created a point and click escape game with a lot of script and sound design work. The experience is very pleasant to live and the game doesn't take more than 15 minutes!
+
+To do so, we created a **"point and click" escape game** with a lot of script and **sound design** work. The experience is very pleasant to live and the game doesn't take more than 15 minutes!
 
 ## Initial situation
 
